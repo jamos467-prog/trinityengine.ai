@@ -58,14 +58,14 @@ const ctaForm = document.querySelector('.cta-form');
 if (ctaForm) {
     const form = ctaForm.querySelector('form') || ctaForm;
     const input = form.querySelector('.cta-input');
-    const button = form.querySelector('.btn-primary-large') || form.querySelector('button');
+    const button = form.querySelector('.btn-secondary-large') || form.querySelector('.btn-primary-large') || form.querySelector('button');
     
     if (button) {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             if (input && input.value) {
                 // Here you would typically send the email to your backend
-                alert('Thank you! We\'ll be in touch soon.');
+                alert('Thank you for joining the waitlist! We\'ll notify you when Trinity Engine is ready.');
                 input.value = '';
             } else {
                 alert('Please enter a valid email address.');

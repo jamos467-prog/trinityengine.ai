@@ -141,6 +141,23 @@ body {
     background: rgba(51, 231, 255, 0.1);
 }
 
+.btn-secondary-large {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-secondary-large:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(51, 231, 255, 0.1);
+    transform: translateY(-2px);
+}
+
 .btn-outline {
     background: transparent;
     color: var(--accent-cyan);
@@ -378,6 +395,28 @@ section {
     margin: 0 auto;
 }
 
+/* Code Philosophy Section */
+.code-philosophy {
+    background: var(--bg-primary);
+}
+
+.code-philosophy-content {
+    max-width: 900px;
+    margin: var(--spacing-md) auto 0;
+    text-align: left;
+}
+
+.code-philosophy-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.code-philosophy-content p:last-child {
+    margin-bottom: 0;
+}
+
 /* Features Section */
 .features {
     background: var(--bg-secondary);
@@ -599,6 +638,25 @@ section {
     box-shadow: var(--shadow-glow);
 }
 
+.btn-pricing-secondary {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-pricing-secondary:hover {
+    background: rgba(51, 231, 255, 0.1);
+    border-color: var(--accent-cyan);
+}
+
 /* CTA Section */
 .cta {
     background: var(--bg-secondary);
@@ -722,6 +780,15 @@ section {
     
     .hero-title {
         font-size: 2.5rem;
+    }
+    
+    .code-philosophy-content {
+        text-align: center;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .code-philosophy-content p {
+        font-size: 1rem;
     }
     
     .process-flow {
