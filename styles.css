@@ -211,8 +211,16 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     color: var(--text-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
 }
 
 .gradient-text {
@@ -782,6 +790,10 @@ section {
         font-size: 2.5rem;
     }
     
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
     .code-philosophy-content {
         text-align: center;
         padding: 0 var(--spacing-sm);
@@ -813,6 +825,10 @@ section {
 @media (max-width: 640px) {
     .hero-title {
         font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
     }
     
     .section-title {
