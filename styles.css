@@ -498,6 +498,25 @@ section {
     margin-bottom: 0;
 }
 
+/* n+1 Advantage Section */
+.n-plus-one {
+    background: var(--bg-secondary);
+    padding: 80px 20px;
+}
+
+.n-plus-one-content {
+    max-width: 900px;
+    margin: var(--spacing-md) auto 0;
+    text-align: left;
+}
+
+.n-plus-one-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
 /* Features Section */
 .features {
     background: var(--bg-secondary);
@@ -873,6 +892,15 @@ section {
     }
     
     .code-philosophy-content p {
+        font-size: 1rem;
+    }
+    
+    .n-plus-one-content {
+        text-align: center;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .n-plus-one-content p {
         font-size: 1rem;
     }
     
