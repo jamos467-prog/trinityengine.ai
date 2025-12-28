@@ -1,0 +1,32 @@
+# Waitlist data
+waitlist.json
+
+# Gmail API credentials
+api/credentials.json
+api/token.json
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+

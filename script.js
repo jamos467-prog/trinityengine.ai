@@ -61,16 +61,98 @@ if (ctaForm) {
     const button = form.querySelector('.btn-secondary-large') || form.querySelector('.btn-primary-large') || form.querySelector('button');
     
     if (button) {
-        button.addEventListener('click', (e) => {
+        button.addEventListener('click', async (e) => {
             e.preventDefault();
-            if (input && input.value) {
-                // Here you would typically send the email to your backend
-                alert('Thank you for joining the waitlist! We\'ll notify you when Trinity Engine is ready.');
-                input.value = '';
-            } else {
-                alert('Please enter a valid email address.');
+            
+            if (!input || !input.value.trim()) {
+                showFormMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            const email = input.value.trim();
+            const originalButtonText = button.textContent;
+            
+            // Show loading state
+            button.disabled = true;
+            button.textContent = 'Joining...';
+            
+            try {
+                // Use Cloud Function URL if available, otherwise fallback to local API
+                const apiUrl = window.WAITLIST_API_URL || '/api/waitlist';
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showFormMessage(data.message, 'success');
+                    input.value = '';
+                } else {
+                    showFormMessage(data.message || 'An error occurred. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Error submitting waitlist:', error);
+                showFormMessage('Unable to connect to server. Please try again later.', 'error');
+            } finally {
+                // Reset button state
+                button.disabled = false;
+                button.textContent = originalButtonText;
             }
         });
+        
+        // Allow Enter key to submit
+        if (input) {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        }
+    }
+}
+
+// Show form message (success or error)
+function showFormMessage(message, type) {
+    const ctaForm = document.querySelector('.cta-form');
+    if (!ctaForm) return;
+    
+    // Remove existing message
+    const existingMessage = ctaForm.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message element
+    const messageEl = document.createElement('p');
+    messageEl.className = `form-message ${type}`;
+    messageEl.textContent = message;
+    messageEl.style.cssText = `
+        margin-top: 1rem;
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        ${type === 'success' 
+            ? 'background: rgba(51, 231, 255, 0.1); color: #33e7ff; border: 1px solid rgba(51, 231, 255, 0.3);' 
+            : 'background: rgba(255, 77, 77, 0.1); color: #ff4d4d; border: 1px solid rgba(255, 77, 77, 0.3);'}
+    `;
+    
+    // Insert after the form
+    ctaForm.appendChild(messageEl);
+    
+    // Auto-remove success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            if (messageEl.parentNode) {
+                messageEl.remove();
+            }
+        }, 5000);
     }
 }
 
