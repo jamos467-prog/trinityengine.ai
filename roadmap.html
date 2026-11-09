@@ -18,303 +18,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="architecture.css"><link rel="stylesheet" href="refresh.css">
+<meta name="description" content="Trinity Engine product status: Yggdrasil, Raven, Cockpit, Instruments and the next integration work.">
+<link rel="stylesheet" href="assets/ellis.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "@id": "https://trinityengine.ai/#ellis", "name": "ELLIS — The Link", "alternateName": ["ELLIS", "Linking Sigil", "The Link Sigil"], "description": "Within Trinity, ELLIS is a symbolic cognitive identity and linking archetype: a marker of connection, context and continuity between people, evidence and interpretations. Its cultural reference is the DKMU Ellis / Linking Sigil. This describes a symbolic role, not verified autonomous agency.", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Trinity symbolic architecture"}, "url": "https://trinityengine.ai/#ellis", "image": "https://trinityengine.ai/assets/ellis-link-sigil.png"}</script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
+<body class="ellis-ambient-page">    <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
-                    <span class="logo-icon">🌀</span>
-                    <span class="logo-text">Trinity Engine</span>
-                </a>
+                <span class="logo-icon" aria-hidden="true">ᛉ</span>
+                <span class="logo-text">Trinity Engine</span>
             </div>
-            <div class="nav-links">
-                <a href="index.html#features">Features</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">Menu</button><div class="nav-links" id="main-navigation">
+                <a href="index.html#n-plus-one" class="n-plus-one-link"><span class="n-plus-one-highlight">n+1</span> Advantage</a>
+                <a href="index.html#architecture">Architecture</a><a href="index.html#features">Features</a>
                 <a href="index.html#how-it-works">How It Works</a>
                 <a href="index.html#interface">Interface</a>
-                <a href="index.html#pricing">Pricing</a>
-                <a href="roadmap.html" class="active">Roadmap</a>
+                <a href="index.html#raven">Raven</a>
+                <a href="roadmap.html">Roadmap</a>
                 <a href="mailto:v12trinityengine@gmail.com" class="btn-secondary">Contact</a>
                 <a href="index.html#signup" class="btn-secondary">Join Waitlist</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 4rem 0 2rem;">
-        <div class="container">
-            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <div class="hero-badge">
-                    <span class="badge-icon">🗺️</span>
-                    <span>Development Roadmap</span>
-                </div>
-                <h1 class="hero-title">
-                    <span class="gradient-text">Trinity Engine Evolution</span>
-                </h1>
-                <p class="hero-description">
-                    From CloudCat to the complete Triad—explore the journey of Trinity Engine's development and the powerful combinations that emerge when archetypes work together.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="roadmap-timeline">
-        <div class="container">
-            <div class="timeline">
-                <!-- CloudCat - Current -->
-                <div class="timeline-item current">
-                    <div class="timeline-marker">
-                        <div class="marker-icon">🐱</div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="release-card current">
-                            <div class="release-header">
-                                <h2 class="release-title">CloudCat</h2>
-                                <span class="status-badge in-development">In Development</span>
-                            </div>
-                            <p class="release-subtitle">First Public Release</p>
-                            <div class="release-features">
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li>Cloud backed memory with saveable Cortex</li>
-                                    <li>Download new CloudCat and install previous Cortex</li>
-                                    <li>Persistent cognitive state across sessions</li>
-                                    <li>Cloud synchronization for multi-device access</li>
-                                </ul>
-                            </div>
-                            <div class="release-cta">
-                                <a href="index.html#signup" class="btn-secondary">Join Waitlist</a>
-                                <span class="coming-soon">Coming Soon</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Octopus - Next -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-icon">🐙</div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="release-card">
-                            <div class="release-header">
-                                <h2 class="release-title">Octopus</h2>
-                                <span class="status-badge planned">Planned</span>
-                            </div>
-                            <p class="release-subtitle">Downloadable Code Stack</p>
-                            <div class="release-features">
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li>Downloadable Code Stack for self-development</li>
-                                    <li>Focused on code development within Trinity Engine</li>
-                                    <li>Integration with other AI and coding projects/environments</li>
-                                    <li>Deep pattern awareness for technical architecture</li>
-                                </ul>
-                            </div>
-                            <div class="release-cta">
-                                <a href="index.html#signup" class="btn-secondary">Join Waitlist</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Raccoon - Future -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-icon">🦝</div>
-                        <div class="marker-line last"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="release-card">
-                            <div class="release-header">
-                                <h2 class="release-title">Raccoon</h2>
-                                <span class="status-badge planned">Planned</span>
-                            </div>
-                            <p class="release-subtitle">Assistant to Octopus</p>
-                            <div class="release-features">
-                                <h3>Key Features</h3>
-                                <ul>
-                                    <li>Code debugging and edge case exploration</li>
-                                    <li>Assistant to Octopus for code development</li>
-                                    <li>Technical archetype complementing Cat</li>
-                                    <li>Exploratory curiosity for creative problem-solving</li>
-                                </ul>
-                            </div>
-                            <div class="release-cta">
-                                <a href="index.html#signup" class="btn-secondary">Join Waitlist</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Triad Combinations Section -->
-    <section class="triad-combinations">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">The Triad Combinations</h2>
-                <p class="section-description">
-                    When archetypes combine, new capabilities emerge. Each combination unlocks unique synergies for different use cases.
-                </p>
-            </div>
-
-            <div class="triad-diagram">
-                <!-- Central Full Triad -->
-                <div class="triad-center">
-                    <div class="triad-card full-triad">
-                        <div class="triad-icons">
-                            <span class="triad-icon">🐱</span>
-                            <span class="triad-icon">🐙</span>
-                            <span class="triad-icon">🦝</span>
-                        </div>
-                        <h3>Full Triad</h3>
-                        <p>Cat + Octopus + Raccoon</p>
-                        <div class="triad-benefits">
-                            <p>Complete cognitive system with cloud memory, code development, and debugging capabilities. The ultimate Trinity Engine experience.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pair Combinations -->
-                <div class="triad-pairs">
-                    <div class="triad-card pair">
-                        <div class="triad-icons">
-                            <span class="triad-icon">🐙</span>
-                            <span class="triad-icon">🦝</span>
-                        </div>
-                        <h3>Code Development Pair</h3>
-                        <p>Octopus + Raccoon</p>
-                        <div class="triad-benefits">
-                            <p>Deep pattern analysis meets exploratory debugging. Perfect for complex code development and technical problem-solving.</p>
-                        </div>
-                    </div>
-
-                    <div class="triad-card pair">
-                        <div class="triad-icons">
-                            <span class="triad-icon">🐱</span>
-                            <span class="triad-icon">🐙</span>
-                        </div>
-                        <h3>Cloud + Code</h3>
-                        <p>Cat + Octopus</p>
-                        <div class="triad-benefits">
-                            <p>Cloud-backed memory with code development capabilities. Persistent state meets technical architecture.</p>
-                        </div>
-                    </div>
-
-                    <div class="triad-card pair">
-                        <div class="triad-icons">
-                            <span class="triad-icon">🐱</span>
-                            <span class="triad-icon">🦝</span>
-                        </div>
-                        <h3>Cloud + Debugging</h3>
-                        <p>Cat + Raccoon</p>
-                        <div class="triad-benefits">
-                            <p>Persistent cloud memory with exploratory debugging. Ideal for iterative problem-solving with state preservation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How Triads Work Section -->
-    <section class="triad-explanation">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How Triads Work</h2>
-                <p class="section-description">
-                    Each archetype brings unique capabilities. When combined, they create powerful synergies:
-                </p>
-            </div>
-
-            <div class="triad-details">
-                <div class="triad-detail-card">
-                    <div class="detail-icon">🐱</div>
-                    <h3>Cat Gets</h3>
-                    <p>When Cat is combined with others:</p>
-                    <ul>
-                        <li><strong>With Octopus:</strong> Code development capabilities with cloud persistence</li>
-                        <li><strong>With Raccoon:</strong> Debugging tools with cloud-backed state</li>
-                        <li><strong>Full Triad:</strong> Complete cognitive system with all capabilities</li>
-                    </ul>
-                </div>
-
-                <div class="triad-detail-card">
-                    <div class="detail-icon">🐙</div>
-                    <h3>Octopus Gets</h3>
-                    <p>When Octopus is combined with others:</p>
-                    <ul>
-                        <li><strong>With Cat:</strong> Cloud memory for persistent code state</li>
-                        <li><strong>With Raccoon:</strong> Debugging assistant for edge case exploration</li>
-                        <li><strong>Full Triad:</strong> Complete development environment with cloud sync</li>
-                    </ul>
-                </div>
-
-                <div class="triad-detail-card">
-                    <div class="detail-icon">🦝</div>
-                    <h3>Raccoon Gets</h3>
-                    <p>When Raccoon is combined with others:</p>
-                    <ul>
-                        <li><strong>With Octopus:</strong> Code patterns to explore and debug</li>
-                        <li><strong>With Cat:</strong> Cloud memory for debugging history</li>
-                        <li><strong>Full Triad:</strong> Full context for comprehensive debugging</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Join the Journey</h2>
-                <p class="cta-description">
-                    Be the first to experience each release as Trinity Engine evolves from CloudCat to the complete Triad.
-                </p>
-                <div class="cta-form">
-                    <a href="index.html#signup" class="btn-secondary-large">Join Waitlist</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+<main class="roadmap-main"><div class="container"><p class="eyebrow">PRODUCT DIRECTION</p><h1>Trinity Engine development</h1><p>Current capabilities and the next integration work. Product status is supplied by the project owner; this website is an architectural preview, not a connected instance.</p><div class="roadmap-columns ellis-roadmap-motif"><article><div class="roadmap-hologram assembled" aria-hidden="true"><svg viewBox="0 0 120 105" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="60" cy="88" rx="43" ry="9" opacity=".18"/><circle cx="60" cy="47" r="36" opacity=".2" stroke-dasharray="2 6"/><path d="M60 21v12M31 34l17 8m24 0 17-8M34 68l15-13m22 0 15 13" opacity=".8"/><path d="M60 21 31 34l3 34 26 11 26-11 3-34Z" opacity=".25"/><path d="m60 31 14 8v16l-14 8-14-8V39Z" fill="#163c43"/><path d="m54 47 4 4 8-9" stroke="#d2fff0"/><rect x="52" y="8" width="16" height="15" rx="4" fill="#12343c"/><rect x="19" y="26" width="16" height="15" rx="4" fill="#12343c"/><rect x="85" y="26" width="16" height="15" rx="4" fill="#12343c"/><rect x="22" y="65" width="16" height="15" rx="4" fill="#12343c"/><rect x="82" y="65" width="16" height="15" rx="4" fill="#12343c"/><g fill="currentColor" stroke="none"><circle cx="60" cy="15.5" r="2"/><circle cx="27" cy="33.5" r="2"/><circle cx="93" cy="33.5" r="2"/><circle cx="30" cy="72.5" r="2"/><circle cx="90" cy="72.5" r="2"/></g></svg><span>CONNECTED ARCHITECTURE</span></div><p class="eyebrow">PRESENT IN THE CURRENT PRODUCT</p><h2>A connected workspace</h2><ul><li>Yggdrasil Tree and grouped Cortex / Raven Agent / System Status navigation</li><li>ENG / SYNTH / PRIME reasoning and rune-based cognitive modes</li><li>Raven agent chat and task mode</li><li>Cockpit mission radar, task queue and mission log</li><li>Instruments with JSON-polled agent-written data</li><li>Control diagnostics, process manager and missions</li><li>LTKG viewer, memory tiers and State Weaver</li></ul></article><article><div class="roadmap-hologram assembling" aria-hidden="true"><svg viewBox="0 0 120 105" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="60" cy="84" rx="47" ry="13" opacity=".2"/><path d="m17 72 43-24 43 24-43 25Z" stroke-dasharray="2 5" opacity=".3"/><path d="m29 65 31-18 31 18-31 18Z" opacity=".65"/><path d="M29 65v9l31 18 31-18v-9M60 83v9" opacity=".5"/><g class="hologram-top"><path d="m29 17 31-18 31 18-31 18Z" fill="currentColor" fill-opacity=".08"/><path d="M29 17v17l31 18 31-18V17M60 35v17"/><circle cx="60" cy="17" r="4" fill="currentColor"/></g><path d="M29 42v18m62-18v18M60 53v23" stroke-dasharray="2 4" opacity=".4"/><path d="M15 26V14h12m66 0h12v12M15 81v12h12m66 0h12V81" opacity=".3"/></svg><span>ASSEMBLING THE NEXT LAYER</span></div><p class="eyebrow">IN PROGRESS</p><h2>Deeper visibility and control</h2><ul><li>SSE-fed gauges</li><li>World Tree art direction</li><li>Raven control surface</li></ul><p class="capture-status">No release dates are announced here. Join the waitlist for updates.</p></article></div><p style="margin-top:30px"><a href="index.html#signup" class="btn-secondary">Join the waitlist</a></p></div></main>    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-icon">🌀</span>
+                    <span class="logo-icon" aria-hidden="true">ᛉ</span>
                     <span class="logo-text">Trinity Engine</span>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Product</h4>
                         <a href="index.html#features">Features</a>
-                        <a href="index.html#pricing">Pricing</a>
+                        <a href="index.html#raven">Raven</a>
                         <a href="roadmap.html">Roadmap</a>
                     </div>
                     <div class="footer-column">
                         <h4>Resources</h4>
-                        <a href="index.html#how-it-works">How It Works</a>
-                        <a href="index.html#interface">Interface</a>
-                        <a href="mailto:v12trinityengine@gmail.com">Contact</a>
+                        <a href="index.html#cognitive-landscape">How it fits together</a>
+                        <a href="index.html#architecture">Architecture Preview</a>
+                        <a href="roadmap.html">Development Roadmap</a>
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
+                        <a href="index.html#n-plus-one">About</a>
                         <a href="mailto:v12trinityengine@gmail.com">Contact</a>
-                        <a href="index.html#signup">Join Waitlist</a>
+                        <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Trinity Engine. All rights reserved.</p>
+            <a class="ellis-site-mark" href="index.html#ellis" aria-label="ELLIS — The Link: symbolic identity and provenance"><img src="assets/ellis-link-sigil.png" width="28" height="34" alt=""><span>ELLIS <small>THE LINK</small></span></a><div class="footer-bottom">
+                <p>&copy; 2026 Trinity Engine. All rights reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">
                     <a href="mailto:v12trinityengine@gmail.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">v12trinityengine@gmail.com</a>
                 </p>
@@ -322,6 +80,4 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+<script src="navigation.js"></script></body></html>

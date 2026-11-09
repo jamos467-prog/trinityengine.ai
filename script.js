@@ -2,10 +2,13 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const id = this.getAttribute('href').slice(1);
+        const target = id ? document.getElementById(id) : null;
         if (target) {
+            const view = document.querySelector('[data-manifold-view="' + id + '"]');
+            if (view) view.click();
             target.scrollIntoView({
-                behavior: 'smooth',
+                behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ? 'auto' : 'smooth',
                 block: 'start'
             });
         }
@@ -64,7 +67,7 @@ if (ctaForm) {
         button.addEventListener('click', async (e) => {
             e.preventDefault();
             
-            if (!input || !input.value.trim()) {
+            if (!input || !input.value.trim() || !input.checkValidity()) {
                 showFormMessage('Please enter a valid email address.', 'error');
                 return;
             }
@@ -90,7 +93,7 @@ if (ctaForm) {
                 
                 const data = await response.json();
                 
-                if (data.success) {
+                if (response.ok && data.success) {
                     showFormMessage(data.message, 'success');
                     input.value = '';
                 } else {
@@ -132,6 +135,7 @@ function showFormMessage(message, type) {
     // Create new message element
     const messageEl = document.createElement('p');
     messageEl.className = `form-message ${type}`;
+    messageEl.setAttribute('role', 'status');
     messageEl.textContent = message;
     messageEl.style.cssText = `
         margin-top: 1rem;

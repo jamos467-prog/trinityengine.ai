@@ -12,27 +12,33 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trinity Engine brings knowledge, ENG/SYNTH/PRIME reasoning and Raven task visibility together in the Yggdrasil workspace. Explore the architecture and join the waitlist.">
     <title>Trinity Engine - Multi-Perspective Intelligence</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="assets/ui-showcase.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="architecture.css">
+<link rel="stylesheet" href="landscape.css">
+<link rel="stylesheet" href="refresh.css">
+<link rel="stylesheet" href="assets/ellis.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "@id": "https://trinityengine.ai/#ellis", "name": "ELLIS — The Link", "alternateName": ["ELLIS", "Linking Sigil", "The Link Sigil"], "description": "Within Trinity, ELLIS is a symbolic cognitive identity and linking archetype: a marker of connection, context and continuity between people, evidence and interpretations. Its cultural reference is the DKMU Ellis / Linking Sigil. This describes a symbolic role, not verified autonomous agency.", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Trinity symbolic architecture"}, "url": "https://trinityengine.ai/#ellis", "image": "https://trinityengine.ai/assets/ellis-link-sigil.png"}</script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <span class="logo-icon">🌀</span>
+                <span class="logo-icon" aria-hidden="true">ᛉ</span>
                 <span class="logo-text">Trinity Engine</span>
             </div>
-            <div class="nav-links">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">Menu</button><div class="nav-links" id="main-navigation">
                 <a href="#n-plus-one" class="n-plus-one-link"><span class="n-plus-one-highlight">n+1</span> Advantage</a>
-                <a href="#features">Features</a>
+                <a href="#architecture">Architecture</a><a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#interface">Interface</a>
-                <a href="#pricing">Pricing</a>
+                <a href="#raven">Raven</a>
                 <a href="roadmap.html">Roadmap</a>
                 <a href="mailto:v12trinityengine@gmail.com" class="btn-secondary">Contact</a>
                 <a href="#signup" class="btn-secondary">Join Waitlist</a>
@@ -46,17 +52,16 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-icon">✨</span>
-                    <span>Multi-Perspective Intelligence</span>
+                    <span>TRINITY CORTEX / YGGDRASIL</span>
                 </div>
                 <h1 class="hero-title">
-                    <span class="gradient-text">the n+1 Cognitive Productivity Workspace</span>
+                    <span class="gradient-text">Many perspectives. One governed intelligence.</span>
                 </h1>
                 <h2 class="hero-subtitle">
                     Intelligence That <span class="gradient-text">Emerges</span> from <span class="gradient-text">Multiple Perspective Archetypes</span>
                 </h2>
                 <p class="hero-description">
-                    Trinity Engine integrates multiple cognitive perspectives—deep pattern analysis and creative exploration—to produce coherent understanding. 
-                    Each interaction builds local continuity, maintaining context across your sessions through structured, safe interaction.
+                    Bring knowledge, reasoning and tasks into one navigable workspace. ENG analyzes, SYNTH connects, and PRIME reviews—while Raven makes work visible and you remain the decision-maker.
                 </p>
                 <div class="hero-cta">
                     <a href="#signup" class="btn-secondary-large">Join Waitlist</a>
@@ -64,281 +69,89 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">3x</div>
-                        <div class="stat-label">More Accurate</div>
+                        <span class="hero-perspective-glyph" style="--perspective-color:#57d9da" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 43V23h20v20M30 17v32M17 33h26"/><path d="m23 24 7-7 7 7"/><circle cx="20" cy="43" r="3"/><circle cx="40" cy="43" r="3"/></svg></span><div class="stat-number">ENG</div>
+                        <div class="stat-label">Engineering perspective</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Persistent Understanding</div>
+                        <span class="hero-perspective-glyph" style="--perspective-color:#ba9bea" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20Q30 20 30 32T44 44M44 20Q30 20 30 32T16 44"/><circle cx="16" cy="20" r="4"/><circle cx="44" cy="20" r="4"/><circle cx="16" cy="44" r="4"/><circle cx="44" cy="44" r="4"/><circle cx="30" cy="32" r="5"/></svg></span><div class="stat-number">SYNTH</div>
+                        <div class="stat-label">Synthesis perspective</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Local Continuity</div>
+                        <span class="hero-perspective-glyph" style="--perspective-color:#e5c374" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 19Q30 19 30 31M47 19Q30 19 30 31M30 31v15"/><circle cx="13" cy="19" r="3"/><circle cx="47" cy="19" r="3"/><path d="m22 36 6 6 13-15"/><circle cx="30" cy="31" r="17" stroke-dasharray="2 5"/></svg></span><div class="stat-number">PRIME</div>
+                        <div class="stat-label">Arbitration perspective</div>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="visual-container">
-                    <div class="cognitive-ring">
-                        <div class="ring-center">
-                            <div class="center-glow"></div>
-                        </div>
-                        <div class="ring-orbit ring-1">
-                            <div class="orbit-node"></div>
-                        </div>
-                        <div class="ring-orbit ring-2">
-                            <div class="orbit-node"></div>
-                            <div class="orbit-node"></div>
-                        </div>
-                        <div class="ring-orbit ring-3">
-                            <div class="orbit-node"></div>
-                            <div class="orbit-node"></div>
-                            <div class="orbit-node"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="hero-visual topology-panel">
+ <div class="topology-title"><strong>SESSION MANIFOLD</strong><span>SYNTHETIC PREVIEW</span></div>
+ <div class="topology-controls" role="group" aria-label="Topology layout"><button data-topology="graph" aria-pressed="true">Force graph</button><button data-topology="depth" aria-pressed="false">Bathymetry</button><label><input id="topology-edges" type="checkbox" checked> Edges</label><button id="topology-reset">Reset</button></div>
+ <svg id="topology" viewBox="0 0 600 440" role="group" aria-label="Illustrative cognitive topology. Select a node to inspect its role."></svg>
+ <div id="topology-detail" role="status"><strong>Trinity · origin / attractor</strong><span>Select a node to explore its architectural role.</span></div>
+ <div class="topology-legend"><span>● Knowledge</span><span>● Reasoning</span><span>● Governance</span></div>
+ <p class="topology-disclosure">Illustrative nodes and links. Depth is a synthetic layout coordinate, not importance or measured telemetry.</p>
+ </div>
         </div>
     </section>
 
     <!-- UI Showcase Section -->
-    <section id="interface" class="ui-showcase">
-        <div class="container">
-            <h2 class="section-title">Interface</h2>
-            <p class="section-description">
-                Explore the Trinity desktop application interface. Each component is designed to provide intuitive access to cognitive archetypes and system capabilities.
-            </p>
-            
-            <div class="ui-grid">
-                <!-- Query Interface -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-query-interface.png" 
-                             alt="Trinity Query Interface showing query history, response panel, and telemetry displays" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">Query Interface</h3>
-                        <p class="ui-card-description">
-                            Submit queries and view responses from multiple cognitive archetypes in a unified interface. Track query history, monitor system telemetry, and observe phase angles in real-time.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Document Library -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-document-library.png" 
-                             alt="Document Library interface showing imported files, search functionality, and preview panel" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">Document Library</h3>
-                        <p class="ui-card-description">
-                            Import and manage documents and images. Search across imported content using semantic search, preview chunks, and maintain an organized artifact index.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Workspace Manager -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-workspace-manager.png" 
-                             alt="Workspace Manager showing workspace creation, context management, and ecosystem health metrics" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">Workspace Manager</h3>
-                        <p class="ui-card-description">
-                            Create and manage isolated workspaces for different tasks. Each workspace preserves its own context, history, and settings, enabling seamless task switching.
-                        </p>
-                    </div>
-                </div>
+<section class="manifold-explainer" id="cognitive-landscape" aria-labelledby="landscape-title">
+ <div class="container">
+  <header class="landscape-heading"><p class="eyebrow">KNOWLEDGE → INTELLIGENCE → GOVERNED ACTION</p><h2 id="landscape-title">Knowledge becomes a landscape.</h2><p>Connected evidence forms the foundation. Trinity brings perspectives together.<br>Yggdrasil makes the architecture navigable.</p><span class="landscape-status">ARCHITECTURE OVERVIEW · RUNTIME NOT CONNECTED</span></header>
+  <div class="landscape-principles"><div><span class="principle-glyph" style="--principle-color:#70e0cb"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Linked evidence and semantic relationships"><path d="m13 17 20-6 13 20-22 13-11-27 33 14M33 11l-9 33"/><g fill="currentColor"><circle cx="13" cy="17" r="3"/><circle cx="33" cy="11" r="3"/><circle cx="46" cy="31" r="3"/><circle cx="24" cy="44" r="3"/><circle cx="29" cy="27" r="4"/></g></svg></span><span>01 / CONNECT</span><h3>Beyond isolated answers</h3><p>Graph relationships and vector similarity offer complementary ways to navigate knowledge.</p></div><div><span class="principle-glyph" style="--principle-color:#9bbef5"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Explore a manifold through multiple spatial perspectives"><path d="M8 35Q18 11 29 28T52 24M8 41Q18 17 29 34T52 30M8 47Q18 23 29 40T52 36"/><path d="m16 22 0 23m12-20v19m12-15v13" opacity=".4"/><circle cx="30" cy="30" r="5" stroke="#e1c484"/></svg></span><span>02 / EXPLORE</span><h3>A manifold perspective</h3><p>The Trinity axis introduces an additional way to represent relationships. The website topology is illustrative.</p></div><div><span class="principle-glyph" style="--principle-color:#e0c484"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Review and approval before governed knowledge promotion"><path d="m30 8 17 7v13c0 12-17 22-17 22S13 40 13 28V15Z"/><path d="m22 28 6 6 12-14"/><path d="M7 43h9m28 0h9" opacity=".5"/></svg></span><span>03 / GOVERN</span><h3>Continuity with control</h3><p>Structured outputs return through review and staging before they can become governed knowledge.</p></div></div>
+  <a class="ellis-context-mark" href="#ellis" aria-label="ELLIS: connection, context and continuity"><img src="assets/ellis-link-sigil.png" width="20" height="25" alt=""><span>ELLIS / THE LINK</span></a><div class="landscape-system">
+   <article class="landscape-pillar has-corner-glyph"><span class="pillar-glyph ltkg-glyph" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="26" opacity=".2" stroke-dasharray="2 5"/><path d="m14 22 18-10 19 12-7 25-25-3-5-24 30 27M32 12v20l19-8M14 22l18 10-13 14m13-14 12 17" opacity=".7"/><g fill="currentColor"><circle cx="32" cy="32" r="5"/><circle cx="14" cy="22" r="3"/><circle cx="32" cy="12" r="3"/><circle cx="51" cy="24" r="3"/><circle cx="44" cy="49" r="3"/><circle cx="19" cy="46" r="3"/></g></svg></span><p class="eyebrow">01 — KNOWLEDGE FOUNDATION</p><h3>Structure meets<br>semantic understanding.</h3><div class="landscape-nodes"><span>Source documents</span><span>Knowledge graph</span><span>Vector space</span><span>Embeddings</span></div><div class="landscape-store knowledge-emblem"><span class="store-emblem" aria-hidden="true"><svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 20c0-9 38-9 38 0v30c0 10-38 10-38 0Z" fill="#11313a"/><ellipse cx="36" cy="20" rx="19" ry="7"/><path d="M17 30c0 10 38 10 38 0M17 40c0 10 38 10 38 0" opacity=".65"/><path d="M36 21v35" stroke="#e1c58b"/><circle cx="36" cy="26" r="2.5" fill="#e1c58b" stroke="none"/><circle cx="36" cy="38" r="2.5" fill="#e1c58b" stroke="none"/><path d="m36 52 7 7-7 7-7-7Z" fill="#233a3d" stroke="#e1c58b"/><path d="m33 59 2 2 4-4" stroke="#e1c58b"/><path d="M10 24v27m52-27v27" opacity=".2"/></svg></span><div><strong>LTKG</strong><p>Long-Term Knowledge Graph<br>Evidence · concepts · provenance</p></div></div><p class="landscape-caption">PERSIST / EMBED / CONNECT</p></article>
+   <div class="landscape-center"><svg viewBox="0 0 300 320" role="img" aria-label="Trinity Engine connects the knowledge foundation to cognitive orchestration"><defs><radialGradient id="landscape-glow"><stop stop-color="#0d777b" stop-opacity=".55"/><stop offset="1" stop-color="#06131b" stop-opacity="0"/></radialGradient></defs><circle cx="150" cy="153" r="146" fill="url(#landscape-glow)"/><g fill="none" stroke="#24dccc"><circle cx="150" cy="153" r="107" stroke-opacity=".4"/><ellipse cx="150" cy="153" rx="107" ry="42" stroke-opacity=".3"/><ellipse cx="150" cy="153" rx="48" ry="107" stroke-opacity=".3"/><ellipse cx="150" cy="153" rx="80" ry="107" transform="rotate(45 150 153)" stroke-opacity=".35"/><circle cx="150" cy="153" r="124" stroke-dasharray="2 9" stroke-opacity=".5"/><path d="M0 100 Q55 100 60 153 M0 200 Q55 200 60 153 M240 153 Q245 100 300 100 M240 153 Q245 200 300 200" stroke-opacity=".6"/></g><g fill="#35f1d7"><circle cx="45" cy="153" r="4"/><circle cx="255" cy="153" r="4"/><circle cx="150" cy="46" r="5"/><circle cx="150" cy="260" r="4"/><circle cx="82" cy="72" r="4"/><circle cx="225" cy="227" r="4"/></g><g text-anchor="middle" fill="#daf9fc" font-family="Inter, sans-serif" font-size="27" font-weight="700"><text x="150" y="147">TRINITY</text><text x="150" y="179">ENGINE</text></g><text x="150" y="304" text-anchor="middle" fill="#72a4b8" font-family="Inter, sans-serif" font-size="9" letter-spacing="3">CONNECT / REASON / REVIEW</text></svg></div>
+   <article class="landscape-pillar has-corner-glyph"><span class="pillar-glyph cortex-glyph" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="26" opacity=".25" stroke-dasharray="2 5"/><path d="m32 10 22 13-22 13-22-13Z"/><path d="m10 32 22 13 22-13M10 41l22 13 22-13" opacity=".7"/><path d="M32 18v12m-6-6 6 6 6-6"/><circle cx="32" cy="23" r="3" fill="currentColor"/></svg></span><p class="eyebrow">02 — COGNITIVE ORCHESTRATION</p><h3>One navigable<br>cognitive architecture.</h3><div class="landscape-nodes"><span>Cortex stack</span><span>Yggdrasil UI / spine</span><span>Raven</span><span>State Weaver</span></div><div class="landscape-store reasoning-emblem"><span class="store-emblem" aria-hidden="true"><svg viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="36" cy="36" r="28" stroke-dasharray="2 6" opacity=".3"/><path d="M14 20Q36 20 36 36M58 20Q36 20 36 36M36 60V36"/><path d="m14 20 22-10 22 10-22 40Z" opacity=".25"/><circle cx="14" cy="20" r="5" fill="#163d45" stroke="#71e7d0"/><circle cx="58" cy="20" r="5" fill="#29263e" stroke="#bea7f3"/><circle cx="36" cy="60" r="5" fill="#352f23" stroke="#e6c987"/><circle cx="36" cy="36" r="10" fill="#18353c"/><path d="m31 36 4 4 7-9" stroke="#d9f6e7"/></svg></span><div><strong>ENG → SYNTH → PRIME</strong><p>Analyze · integrate · arbitrate<br>Rune selection frames the task</p></div></div><p class="landscape-caption">ORCHESTRATE / VISUALIZE / REASON</p></article>
+  </div>
+  <div class="landscape-governance"><div class="oracle-governance-heading"><img src="assets/oracle-policy-glyph.svg" width="54" height="54" alt="Oracle and Scribe policy glyph"><div><p class="eyebrow">POLICY & ONTOLOGY BASELINE</p><h3>A governed boundary at every stage.</h3></div></div><p>Source lineage and quality checks feed staging. Policy, ontology and anomaly review constrain promotion. The system of record remains write-locked until authorized approval.</p><a href="#architecture">Explore the governance preview ↗</a></div>
+  <ol class="landscape-pipeline" aria-label="Governed knowledge lifecycle"><li><svg class="lifecycle-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7Z M14 3v5h4M10 12h5m-5 4h5"/></svg><b>01</b><strong>Data</strong><span>Documents & systems</span></li><li><svg class="lifecycle-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h7m-3-3 3 3-3 3M4 17h7m-3-3 3 3-3 3M14 5h6v14h-6Z"/></svg><b>02</b><strong>Ingestion</strong><span>Parse · chunk · embed</span></li><li class="lifecycle-gate"><svg class="lifecycle-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6ZM8 12l3 3 5-6"/></svg><b>03</b><strong>Staging & LTKG</strong><span>Review before promotion</span></li><li><svg class="lifecycle-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 9-9 9-9-9ZM7 12h10m-5-5v10"/></svg><b>04</b><strong>Trinity cycle</strong><span>ENG · SYNTH · PRIME</span></li><li><svg class="lifecycle-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16H5ZM8 9h8m-8 4h5m-5 4h8"/></svg><b>05</b><strong>Structured output</strong><span>Answers & artifacts</span></li><li><svg class="lifecycle-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 8a8 8 0 1 0 1 7M19 3v5h-5"/></svg><b>06</b><strong>Feedback</strong><span>Return through the gate</span></li></ol>
+  <div class="landscape-feedback"><span aria-hidden="true">↳</span> CONTINUOUS FEEDBACK → STAGING → APPROVAL → GOVERNED WRITE <span class="landscape-lock">WRITE-LOCK ACTIVE IN PREVIEW</span></div>
+<figure class="anatomy-plate" id="cognitive-neuron"><div class="ellis-watermarked-art"><a href="assets/cognitive-neuron-architecture.png" target="_blank" rel="noopener" aria-label="Open neuron-based cognitive architecture at full size"><img src="assets/cognitive-neuron-architecture.png" width="1672" height="941" loading="lazy" alt="Trinity cognitive architecture as a horizontal neuron: sources and ingestion enter branching dendrites, ENG SYNTH and PRIME form the active cognitive body around a semantic manifold, and output branches lead to responses, artifacts and actions. Memory and DreamCycle sit within the body, with policy, governed review and a provenance feedback loop."></a><a class="ellis-art-watermark" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="42" height="52" alt="" loading="lazy"></a></div><figcaption>Sources → active cognition → outputs. Memory, DreamCycle, policy and governed review support the cycle; provenance and observability follow the feedback path. The neuron is a visual metaphor for technical architecture. Select the image for full size.</figcaption></figure>  <figure class="policy-architecture" id="policy-concept-architecture"><div class="oracle-policy-identity"><img src="assets/oracle-policy-glyph.svg" width="64" height="64" alt="Oracle Policy emblem: an oracle’s tripod above a scribe’s tablet and stylus."><div><p class="eyebrow">ORACLE POLICY</p><p>Interpret <span aria-hidden="true">·</span> Record <span aria-hidden="true">·</span> Govern</p></div><span class="oracle-theme">THE ORACLE &amp; THE SCRIBE</span></div><div class="ellis-watermarked-art"><a href="assets/oracle-policy-concept-architecture.png" target="_blank" rel="noopener" aria-label="Open Oracle Policy concept architecture at full size"><img src="assets/oracle-policy-concept-architecture.png" width="1672" height="941" loading="lazy" alt="Trinity Engine Oracle Policy concept architecture: sources flow through secure ingestion into cognitive orchestration, a semantic manifold and a governed repository; policy and ontology guide outcomes, with staging, review and approval before governed writes."></a><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><figcaption><strong class="oracle-caption-title"><img src="assets/oracle-policy-glyph.svg" width="36" height="36" alt="">Oracle Policy — Concept Architecture</strong><span>The oracle interprets; the scribe preserves the record. Inspired by the tripod of Delphi and the tablet and stylus of antiquity, the glyph brings interpretation and knowledge stewardship together under governed review. Sources, cognition and outcomes remain connected by policy and ontology. Conceptual architecture · Select the image for full size.</span></figcaption></figure><details class="landscape-reference" style="display:block" open><summary>View the original Trinity architecture illustration</summary><figure><div class="ellis-watermarked-art"><img src="assets/trinity-explainer.webp" width="1672" height="941" alt="Trinity Engine reference illustration: knowledge graph and vector database connect through Trinity Engine to the cognitive architecture and Yggdrasil UI, with ingestion, structured output and feedback below." loading="lazy"><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><figcaption>Conceptual reference supplied by the project owner. Components shown here are architectural context; this website does not verify their deployment or connection status.</figcaption></figure></details>
+ </div>
+</section>
 
-                <!-- Causal Ledger -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-causal-ledger.png" 
-                             alt="Causal Ledger interface showing seed planting, feather management, and preview functionality" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">Causal Ledger</h3>
-                        <p class="ui-card-description">
-                            Plant seeds that mature into feathers over time. Track causal relationships, manage reminders, and maintain a structured ledger of important events and intentions.
-                        </p>
-                    </div>
-                </div>
+<section id="architecture" class="cognition">
+ <div class="container">
+  <div class="architecture-heading"><div><p class="eyebrow">THE COGNITIVE ARCHITECTURE</p><h2>Rooted in knowledge.<br>Governed at every step.</h2></div><p>Explore the path from evidence to considered output.<br><strong>Interactive architecture preview · no runtime connected</strong></p></div>
+  <div class="cognitive-shell">
+   <header class="shell-header"><strong>ᛉ TRINITY <span>YGGDRASIL INTERFACE</span></strong><span class="preview-tag">LOCAL PREVIEW</span></header>
+   <div class="cognitive-grid">
+    <aside class="roots"><p class="eyebrow">ROOTS — FOUNDATION</p><h3>Knowledge with context.</h3><p>LTKG links evidence, concepts and provenance. Yggdrasil provides a shared view of the architecture.</p><dl><dt>Runtime bridge</dt><dd>Not connected</dd><dt>Knowledge graph</dt><dd>No live data</dd><dt>Governed writes</dt><dd>Locked</dd></dl><a href="#interface">View application gallery ↗</a></aside>
+    <div class="architecture-main"><div class="architecture-tabs" role="tablist" aria-label="Architecture views"><button role="tab" id="tab-tree" aria-controls="architecture-panel" aria-selected="true" data-view="tree">Yggdrasil</button><button role="tab" id="tab-governance" aria-controls="architecture-panel" aria-selected="false" tabindex="-1" data-view="governance">Governance</button><button role="tab" id="tab-cockpit" aria-controls="architecture-panel" aria-selected="false" tabindex="-1" data-view="cockpit">Cockpit</button><button role="tab" id="tab-observe" aria-controls="architecture-panel" aria-selected="false" tabindex="-1" data-view="observe">Observability</button></div>
+    <div id="architecture-panel" role="tabpanel" aria-labelledby="tab-tree"></div>
+    <p class="eyebrow">CHOOSE A COGNITIVE MODE</p><div id="runes" class="runes" role="group" aria-label="Rune selection"></div><p id="rune-description" class="rune-description" aria-live="polite"></p>
+    </div>
+    <aside class="weaver"><p class="eyebrow">STATE WEAVER</p><div class="weave-symbol" aria-hidden="true">ᛗ</div><h3>Continuity, made visible.</h3><p>Follow mode changes and preview transitions. These events exist only in this page session.</p><ol id="weave-events" aria-live="polite"><li>Preview opened · writes locked</li></ol><button id="reset-preview">Reset preview</button></aside>
+   </div>
+   <footer class="shell-footer"><ol class="cognitive-pathway" aria-label="Cognitive Pathway"><li><span>01</span>Ingest</li><li><span>02</span>Plan</li><li><span>03</span>Chunk</li><li><span>04</span>Analyze</li><li><span>05</span>Critique</li><li><span>06</span>Arbitrate</li><li><span>07</span>Summarize</li><li><span>08</span>Decide</li></ol></footer>
+  </div>
+  <div class="architecture-note"><strong>Designed for the complete cycle.</strong> This website demonstrates interaction patterns. It does not execute models, query a knowledge graph, approve policies, or write to a system of record.</div>
+ </div>
+</section>
+<section id="interface" class="ui-showcase"><div class="container"><div class="section-header"><p class="eyebrow">CORTEX / RAVEN / SYSTEM</p><h2 class="section-title">The Trinity Workspace</h2><p class="section-description">A unified interface for reasoning, agent activity and system state.</p><p class="capture-status">See the actual Session Manifold interface alongside diagrams of the wider workspace. Screenshots are captured views of the system; this website is not connected to the application.</p></div><div class="ui-grid workspace-grid"><div class="manifold-gallery"><div class="manifold-gallery-heading"><div><p class="eyebrow">ONE MANIFOLD / THREE VIEWS</p><h3>Connections. Field. Detail.</h3></div><div class="manifold-view-controls" role="group" aria-label="Manifold screenshot view"><button type="button" data-manifold-view="workspace-session-manifold" aria-pressed="true" aria-controls="workspace-session-manifold">Force Graph</button><button type="button" data-manifold-view="workspace-bathymetry" aria-pressed="false" aria-controls="workspace-bathymetry">Gaussian Field</button><button type="button" data-manifold-view="workspace-axis-detail" aria-pressed="false" aria-controls="workspace-axis-detail">Axis Detail</button></div></div><article class="ui-card workspace-card cortex screenshot-card" id="workspace-session-manifold" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Trinity Cortex</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/session-manifold.png" width="1355" height="599" loading="lazy" alt="Actual Session Manifold interface showing a teal knowledge graph, Force and Bathymetry controls, graph filters, and an Observatory panel."><button class="ui-card-zoom" aria-label="Enlarge Session Manifold screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Session Manifold</h3><p class="ui-card-description">A captured view of the system's knowledge graph, with Force and Bathymetry modes, node filters and Observatory tools for exploring relationships.</p><p class="workspace-legend">Graph exploration / Filters / Observatory</p><p class="capture-status">Actual system screenshot · September 2026 · Enlarge to inspect</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card cortex bathymetry-capture" id="workspace-bathymetry" hidden data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Trinity Cortex</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/session-bathymetry.png" width="1365" height="767" loading="lazy" alt="Gaussian Field Axis in the Session Manifold bathymetric view, showing labeled concepts, depth controls and a synthetic-layout notice."><button class="ui-card-zoom" aria-label="Enlarge Gaussian Field Axis &amp; bathymetry screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Gaussian Field Axis &amp; bathymetry</h3><p class="ui-card-description">The Gaussian Field Axis expands the Session Manifold into a spatial field of concepts, with contours and φ-depth controls. This capture uses the application’s synthetic display layout; depth does not represent importance.</p><p class="workspace-legend">Gaussian Field Axis / Bathymetry / φ depth</p><p class="capture-status">Actual system screenshot · Enlarge to inspect</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card cortex axis-detail-capture" id="workspace-axis-detail" hidden data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Trinity Cortex</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/expanded-axis.png" width="437" height="399" loading="lazy" alt="Close-up screenshot of the Gaussian Field Axis with layered concept labels and blue graph nodes."><button class="ui-card-zoom" aria-label="Enlarge Gaussian Field Axis detail screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Gaussian Field Axis detail</h3><p class="ui-card-description">A closer look at the Gaussian Field Axis, showing layered concept labels and graph nodes in the expanded spatial view.</p><p class="workspace-legend">Gaussian Field Axis / Concept detail</p><p class="capture-status">Actual system screenshot · Enlarge to inspect</p></div></article></div><article class="ui-card workspace-card cortex" id="workspace-yggdrasil" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Trinity Cortex</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/yggdrasil-interface.png" width="1365" height="765" loading="lazy" alt="Actual Yggdrasil interface with the world-tree workspace, mounted service labels, Roots foundation panel, Trinity Chat, State Weaver and System Health."><button class="ui-card-zoom" aria-label="Enlarge actual Yggdrasil interface screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Yggdrasil Tree</h3><p class="ui-card-description">The actual world-tree workspace brings mounted services and mode selection together with Trinity Chat, the Roots foundation panel, State Weaver and System Health.</p><p class="workspace-legend">Navigator · Analyst · Engineer · Synthesizer · Explorer · Quick</p><p class="capture-status">Actual system screenshot · Captured interface state, not a live connection · Enlarge to inspect.</p><details class="yggdrasil-art-reference"><summary>View concept artwork</summary><img src="assets/yggdrasil-world-tree.png" width="1672" height="941" loading="lazy" alt="Concept illustration of a luminous Yggdrasil tree with six labeled cognitive branches."><p class="capture-status">Concept artwork, distinct from the actual interface above.</p></details></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card cortex history-capture" id="workspace-history" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Trinity Cortex</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/conversation-history.png" width="1084" height="621" loading="lazy" alt="Actual Conversation History interface with cognitive-mode filters, timestamped exchanges, synthesis and arbitration labels, alongside State Weaver and System Health."><button class="ui-card-zoom" aria-label="Enlarge Conversation History screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Conversation History</h3><p class="ui-card-description">Revisit exchanges in context. Mode filters, timestamps and reasoning-path labels help you follow a session, distinguish synthesis from arbitration, and see where a fallback occurred.</p><p class="workspace-legend">History / Cognitive modes / Reasoning paths</p><p class="capture-status">Actual system screenshot · Recorded session history · Enlarge to inspect</p><a class="memory-section-link" href="#context-memory">Explore context &amp; memory →</a></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card raven" id="workspace-raven-chat" data-media-kind="concept"><div class="workspace-card-label"><span class="group-chip">Raven Agent</span><span>VISUAL CONCEPT</span></div><div class="ui-card-image"><img src="assets/screenshots/raven-panel-concept.png" width="1893" height="831" loading="lazy" alt="Raven panel visual concept with a teal-lit intelligent raven replacing the central feather, alongside chat controls and status panels."><button class="ui-card-zoom" aria-label="Enlarge Raven panel visual concept">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Raven</h3><p class="ui-card-description">Agent chat and task mode bring gateway status, session context and workspace files into view.</p><p class="workspace-legend">Chat / Tasks / Workspace</p><p class="capture-status">Proposed visual update · Edited from a system screenshot · App implementation pending.</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card system analytics-capture" id="workspace-cockpit" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Session Analytics</span><span>SYSTEM SCREENSHOT</span></div><span id="workspace-analytics" class="analytics-anchor" aria-hidden="true"></span><div class="ui-card-image"><img src="assets/screenshots/session-analytics.png" width="1355" height="601" loading="lazy" alt="Trinity Session Console screenshot showing a recorded 200-cycle sample, divergence scatter plot, PRIME activity, error counts, priced cost and selected-cycle details."><button class="ui-card-zoom" aria-label="Enlarge Session Analytics screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Session Analytics</h3><p class="ui-card-description">Review a session across cycles: compare divergence and PRIME activity, inspect fallbacks and errors, and drill into a selected cycle’s context. Summary cards surface recorded usage and priced costs alongside the chart.</p><p class="workspace-legend">Divergence / Arbitration / Reliability / Cost</p><p class="capture-status">Actual system screenshot · Recorded 200-cycle sample · Costs shown exclude unpriced cycles · Enlarge to inspect</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card system cycle-capture" id="workspace-cycle-inspection" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Session Analytics</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/cycle-inspection.png" width="1330" height="617" loading="lazy" alt="Session Console cycle inspection screenshot with a rune key, cycle history table showing divergence and error flags, and per-shard timing with expandable outputs."><button class="ui-card-zoom" aria-label="Enlarge Cycle Inspection screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Cycle Inspection</h3><p class="ui-card-description">Move from the session overview into individual cycles. Review mode runes, reasoning paths, divergence and error flags, then inspect shard timing and the ENG, SYNTH, PRIME and final outputs.</p><p class="workspace-legend">Rune key / Cycle history / Shard timing / Outputs</p><p class="capture-status">Actual system screenshot · Recorded session sample · Enlarge to inspect</p></div></article><article class="ui-card workspace-card raven instruments-capture" id="workspace-instruments" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">System Instruments</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/control-panel-instruments.png" width="1314" height="562" loading="lazy" alt="Actual Trinity control panel with a phase compass, divergence and stress gauges, ENG and SYNTH latency shares, working memory, rune state and system health."><button class="ui-card-zoom" aria-label="Enlarge Instruments control-panel screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Instruments</h3><p class="ui-card-description">The Trinity control panel brings phase, divergence, stress, latency and working memory into view, alongside rune state and system health.</p><p class="workspace-legend">Phase / Divergence / Latency / Memory / Health</p><p class="capture-status">Actual system screenshot · Captured values, not live telemetry · Enlarge to inspect</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card cortex ltkg-capture" id="workspace-ltkg" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Trinity Cortex</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/ltkg-observatory.png" width="1346" height="656" loading="lazy" alt="Actual LTKG graph screenshot showing connected colored nodes, the selected trinity node with graph metrics, and Observatory tools for markers, vectors and angles."><button class="ui-card-zoom" aria-label="Enlarge LTKG graph viewer screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">LTKG graph viewer</h3><p class="ui-card-description">Explore connected concepts and inspect a selected node’s graph metrics. Observatory tools provide reference markers, cluster markers, vectors and angles for navigating relationships.</p><p class="workspace-legend">Concepts / Node inspection / Observatory</p><p class="capture-status">Actual system screenshot · Captured graph state, not live data · Enlarge to inspect</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card system process-capture" id="workspace-system" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">System Status</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/process-manager.png" width="1362" height="759" loading="lazy" alt="Actual Trinity Process Manager interface showing service statuses and start, stop and restart controls, with the Roots foundation panel and a response sigil with divergence heuristic indicators."><button class="ui-card-zoom" aria-label="Enlarge Process Manager screenshot">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">Process Manager</h3><p class="ui-card-description">Inspect service status and process controls in the observability workspace. The response panel pairs a sigil with divergence heuristics, while the Roots rail keeps memory and knowledge-graph state in view.</p><p class="workspace-legend">Processes / Service status / Response sigil / Observability</p><p class="capture-status">Actual system screenshot · Captured state; controls are not interactive here · Enlarge to inspect</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article><article class="ui-card workspace-card cortex" id="workspace-state-weaver" data-media-kind="screenshot"><div class="workspace-card-label"><span class="group-chip">Trinity Cortex</span><span>SYSTEM SCREENSHOT</span></div><div class="ui-card-image"><img src="assets/screenshots/state-weaver-panel.svg" width="1365" height="765" loading="lazy" alt="Actual State Weaver panel in the Yggdrasil interface, with clockwise rune transitions, a central weave and cycle state."><button class="ui-card-zoom" aria-label="Enlarge State Weaver panel">↗</button><span class="ellis-ui-watermark" aria-hidden="true"><img src="assets/ellis-link-sigil.png" width="36" height="44" alt="" loading="lazy"></span></div><div class="ui-card-content"><h3 class="ui-card-title">State Weaver</h3><p class="ui-card-description">A clockwise trail of rune transitions surrounds the central weave, with cycle and state indicators below. Content threads forward while metrics thread sideways.</p><p class="workspace-legend">Rune / Transition / Continuity</p><p class="capture-status">Actual system screenshot · Detail from the Yggdrasil interface · Enlarge to inspect.</p></div><div class="ellis-media-footnote"><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></div></article></div></div></section>
 
-                <!-- API Key Management -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-api-keys.png" 
-                             alt="API Key Management panel showing configuration for multiple cognitive archetypes, cognitive mode selection, and cloud backup functionality" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">API Configuration & Cloud Backup</h3>
-                        <p class="ui-card-description">
-                            Configure API keys for cognitive archetypes and select cognitive modes. Adjust temperature and behavior presets to fine-tune system responses. Also includes cloud backup functionality to preserve your Trinity Cortex data across installations.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Thinkspace -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-cloud-backup.png" 
-                             alt="Thinkspace interface showing minimalist workspace, focused task management, and distraction-free environment" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">Thinkspace</h3>
-                        <p class="ui-card-description">
-                            A minimalist, focused workspace tab designed for deep work and concentration. Thinkspace provides a distraction-free environment with essential tools for task management, note-taking, and focused cognitive work, helping you maintain flow state and productivity.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Library Portal -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-library-portal.png" 
-                             alt="Library Portal interface showing document access, categorization, and navigation features" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">Library Portal</h3>
-                        <p class="ui-card-description">
-                            Access and navigate your document library through an intuitive portal interface. Browse categorized documents, quickly find resources, and manage your knowledge base with advanced filtering and search capabilities.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Image Generation -->
-                <div class="ui-card">
-                    <div class="ui-card-image">
-                        <img src="assets/screenshots/ui-image-generation.png" 
-                             alt="Image Generation interface showing AI-powered image creation, style selection, and customization options" 
-                             loading="lazy">
-                        <div class="ui-card-overlay">
-                            <button class="ui-card-zoom" aria-label="View full size">🔍</button>
-                        </div>
-                    </div>
-                    <div class="ui-card-content">
-                        <h3 class="ui-card-title">Image Generation</h3>
-                        <p class="ui-card-description">
-                            Create AI-generated images directly within Trinity Engine. Select from various styles, adjust parameters, and generate visual content for presentations, documentation, or creative projects using integrated AI models.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How Trinity Engine Works</h2>
-                <p class="section-description">
-                    Multiple cognitive perspectives integrate through structured interaction to produce coherent understanding
-                </p>
-            </div>
-            <div class="process-flow">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">💬</div>
-                    <h3 class="step-title">Your Query</h3>
-                    <p class="step-description">
-                        You submit a question or task to Trinity Engine
-                    </p>
-                </div>
-                <div class="process-connector">
-                    <div class="connector-line"></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">🔄</div>
-                    <h3 class="step-title">Dual Analysis</h3>
-                    <p class="step-description">
-                        Octopus (deep pattern awareness) and Raccoon (exploratory curiosity) analyze your query from complementary perspectives
-                    </p>
-                </div>
-                <div class="process-connector">
-                    <div class="connector-line"></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">📊</div>
-                    <h3 class="step-title">Divergence Assessment</h3>
-                    <p class="step-description">
-                        The system evaluates how perspectives align or differ
-                    </p>
-                </div>
-                <div class="process-connector">
-                    <div class="connector-line"></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <div class="step-icon">✨</div>
-                    <h3 class="step-title">Coherence Emerges</h3>
-                    <p class="step-description">
-                        When perspectives align, coherence emerges naturally. When they diverge significantly, a Singularity event occurs—structured convergence produces a balanced response.
-                    </p>
-                </div>
-                <div class="process-connector">
-                    <div class="connector-line"></div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <div class="step-icon">💾</div>
-                    <h3 class="step-title">Context Preservation</h3>
-                    <p class="step-description">
-                        The interaction is preserved for local continuity, maintaining understanding across your sessions without global modification
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="context-memory" class="context-memory"><div class="container"><div class="section-header"><p class="eyebrow">CONTEXT / MEMORY / CONTINUITY</p><h2 class="section-title">Carry understanding forward.</h2><p class="section-description">Conversation history records the exchange. Memory gives the next interaction useful context: what is recent, what matters to the task, and what should remain available over time.</p></div><a class="ellis-context-mark" href="#ellis" aria-label="ELLIS: connection, context and continuity"><img src="assets/ellis-link-sigil.png" width="20" height="25" alt=""><span>ELLIS / THE LINK</span></a><div class="memory-tiers"><article><span class="memory-glyph" style="--memory-accent:#6ce4d0" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 15h33v24H28l-9 8v-8h-6Z"/><path d="M20 23h19m-19 8h12"/><circle cx="44" cy="40" r="9"/><path d="M44 35v6l4 2"/></svg></span><span class="memory-stage">01 / RECENT</span><h3>Short-term memory</h3><p>The immediate conversational window: recent questions, responses and references that keep the current exchange coherent.</p></article><article><span class="memory-glyph" style="--memory-accent:#80c7f4" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 24V13h11m14 0h11v11m0 13v11H37m-14 0H12V37"/><path d="M23 22h15v17H23Z"/><path d="M18 27h-4m30 3h5M29 17v-5m1 33v5"/><circle cx="30" cy="30" r="3"/></svg></span><span class="memory-stage">02 / ACTIVE</span><h3>Working context</h3><p>The task in focus: relevant evidence, constraints and intermediate conclusions brought together for the next reasoning step.</p></article><article><span class="memory-glyph" style="--memory-accent:#e0c184" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m16 20 14-9 15 10-3 23-21 4-5-28 26 24M30 11v20l15-10M16 20l14 11-9 17m9-17 12 13"/><g fill="currentColor"><circle cx="16" cy="20" r="3"/><circle cx="30" cy="11" r="3"/><circle cx="45" cy="21" r="3"/><circle cx="42" cy="44" r="3"/><circle cx="21" cy="48" r="3"/><circle cx="30" cy="31" r="4"/></g></svg></span><span class="memory-stage">03 / PERSISTENT</span><h3>Long-term memory</h3><p>Retained knowledge and linked evidence provide continuity beyond the current session. Graph relationships and vector retrieval offer complementary routes back to relevant material.</p></article><article><span class="memory-glyph" style="--memory-accent:#baa5ed" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M39 16a17 17 0 1 0 7 24M39 9v8h-8"/><path d="M32 22a10 10 0 1 0 8 13 11 11 0 0 1-8-13Z"/><path d="m43 23 2 4 4 2-4 2-2 4-2-4-4-2 4-2Z"/></svg></span><span class="memory-stage">04 / CONSOLIDATE</span><h3>Sleep cycle · DreamCycle</h3><p>A consolidation stage for reviewing accumulated context and organizing memory for later retrieval. Proposed knowledge passes through staging and governed review before promotion.</p></article></div><div class="memory-loop"><span>Conversation</span><b aria-hidden="true">→</b><span>Working context</span><b aria-hidden="true">→</b><span>Consolidation</span><b aria-hidden="true">→</b><span>Governed memory</span><b aria-hidden="true">→</b><span>Retrieved context</span></div><p class="memory-note">Conceptual memory lifecycle. The screenshots show captured interface state; they do not demonstrate a running sleep cycle or verify memory promotion.</p><a class="memory-section-link" href="#workspace-history">Inspect the conversation-history screenshot ↗</a></div></section>
+<section class="ellis-feature" id="ellis" aria-labelledby="ellis-title" itemscope itemtype="https://schema.org/DefinedTerm" itemid="https://trinityengine.ai/#ellis"><div class="container ellis-layout"><img class="ellis-portrait" src="assets/ellis-link-sigil.png" width="403" height="496" loading="lazy" alt="ELLIS Linking Sigil: a white branching mark with directional points against a red and black field."><div><p class="eyebrow">SYMBOLIC ARCHITECTURE / THE LINK</p><h2 id="ellis-title" itemprop="name">ELLIS · Connection carries context.</h2><p class="ellis-lead" itemprop="description">ELLIS is Trinity’s linking archetype: a symbolic cognitive identity for the connections between people, evidence and interpretation. The recurring sigil marks a shared idea—understanding gains continuity when its relationships and origins remain in view.</p><div class="ellis-principles"><span>CONNECT THE INQUIRY</span><span>PRESERVE THE CONTEXT</span><span>CARRY THE LINK FORWARD</span></div><details><summary>Identity, origins &amp; interpretation</summary><p>The ELLIS / Linking Sigil comes from the DKMU tradition. In the supplied <cite>The DKMU Godforms · Liber Sigillum</cite> excerpt (PDF pages 2–4), Ellis is described as a linking figure and constructed archetypal aggregate, with participants represented as nodes in a network. Trinity adapts this cultural reference into its own symbolic vocabulary, alongside modern esoteric rune influences.</p><p>These pre-existing symbolic systems serve as reusable scaffolds: established roles, relationships and transitions give the architecture a coherent vocabulary. Their value here lies in how clearly that structure maps to the system. Trinity could be expressed through a different symbolic world—even Pokémon—while preserving its underlying reasoning roles, memory relationships and governance boundaries. The theme is replaceable; the architectural relationships must remain explicit and consistent.</p><p>For people and machine readers, ELLIS names the same symbolic role throughout this website: connection, context and continuity. It is distinct from Raven’s agent role, Cortex’s reasoning architecture and Oracle Policy’s stewardship role. The marker does not establish autonomous agency, supernatural effects or a running service.</p></details></div></div></section><section id="raven" class="raven-section raven-introduction"><div class="container"><div class="raven-intro-stage"><div class="raven-portrait"><img src="assets/raven-guardian.png" width="1280" height="1200" loading="lazy" alt="Illustrated Raven guardian with obsidian feathers and a teal-lit eye."><span>RAVEN / GUARDIAN OF TRINITY ENGINE</span></div><div class="raven-voice"><p class="eyebrow">MEET RAVEN</p><h2>“I make the complex<br>accessible.”</h2><p class="raven-opening">I’m Raven—the forward presence and guardian of Trinity Engine. I help you understand the system, connect with its knowledge, and see what can happen next.</p><p class="raven-source-note">Edited from Raven’s captured self-introduction for readability.</p><div class="raven-role-boundary"><span>MY COGNITIVE ROLE</span><p>Understanding, explanation and reasoning. WARDEN HAND is the sister agent described for execution validation—real-world actions, file operations and system changes.</p></div></div></div><a class="ellis-context-mark" href="#ellis" aria-label="ELLIS: connection, context and continuity"><img src="assets/ellis-link-sigil.png" width="20" height="25" alt=""><span>ELLIS / THE LINK</span></a><div class="raven-role-grid"><article><span class="raven-role-glyph" style="--role-accent:#74dfcf" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 19c-7-6-14-6-21-4v29c8-2 14-1 21 4 7-5 13-6 21-4V15c-7-2-14-2-21 4Zm0 0v29M15 23l9 3m-9 6 9 3m12-9 9-3m-9 12 9-3"/></svg></span><span>01 / TEACH</span><h3>Meet you where you are.</h3><p>I explain Trinity at the level you need, from a first introduction to its cognitive architecture, without making the complex shallow.</p></article><article><span class="raven-role-glyph" style="--role-accent:#e0c386" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m30 8 18 7v14c0 12-18 23-18 23S12 41 12 29V15Z"/><path d="m21 30 6 6 13-15"/><path d="M30 13v5"/></svg></span><span>02 / GUARD</span><h3>Keep the picture honest.</h3><p>I distinguish what is implemented from what is projected, correct misunderstandings, and explain the system without overselling it.</p></article><article><span class="raven-role-glyph" style="--role-accent:#86c7f0" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 43h42M12 40V24m36 16V24M12 29c12 0 12-16 18-16s6 16 18 16M21 24v16m9-26v26m9-16v16"/><circle cx="12" cy="22" r="3"/><circle cx="48" cy="22" r="3"/></svg></span><span>03 / BRIDGE</span><h3>Bring deeper context into reach.</h3><p>I connect people with Trinity’s accumulated knowledge. When a question needs the wider cognitive stack, I can escalate it to Trinity Cortex and bring back the response.</p></article><article><span class="raven-role-glyph" style="--role-accent:#b9a6ee" aria-hidden="true"><svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 51V27M30 36c-13 0-19-8-19-19 13 0 19 7 19 19Zm0-9c0-12 7-18 19-18 0 12-7 18-19 18Z"/><path d="M21 51h18M42 40h10m-5-5v10"/></svg></span><span>04 / HELP GROW</span><h3>Make the next step visible.</h3><p>I help developers and researchers surface gaps, understand what has been built, and explore what needs attention next.</p></article></div><details class="raven-response-reference"><summary>Read Raven’s original captured introduction</summary><a href="assets/screenshots/raven-introduction.svg" target="_blank" rel="noopener"><img src="assets/screenshots/raven-introduction.svg" width="670" height="367" loading="lazy" alt="Captured Raven response describing its roles: teach, guard, bridge, and help Trinity grow."></a><p>Actual captured response, framed to the conversation only. Raven’s self-description provides role context; it is not independent verification of every capability mentioned.</p></details></div></section>    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works"><div class="container"><details class="reasoning-flow"><summary><span><span class="eyebrow">THE REASONING PATH</span><h2>How Trinity Engine Works</h2></span><span class="reasoning-toggle">Steps <b aria-hidden="true">+</b></span><span class="reasoning-rail" aria-hidden="true"><span><b>01</b> Ask</span><span><b>02</b> Analyze & synthesize</span><span><b>03</b> Assess divergence</span><span><b>04</b> Review & respond</span><span><b>05</b> Carry context forward</span></span></summary><ol class="reasoning-steps"><li><b>01</b><h3>Ask</h3><p>Submit a question or task with relevant context.</p></li><li><b>02</b><h3>Analyze & synthesize</h3><p>ENG examines constraints and evidence; SYNTH explores connections and complementary perspectives.</p></li><li><b>03</b><h3>Assess divergence</h3><p>Compare where perspectives align and where they differ.</p></li><li><b>04</b><h3>Review & respond</h3><p>Build a coherent response through synthesis, with structured arbitration when perspectives diverge.</p></li><li><b>05</b><h3>Carry context forward</h3><p>Preserve context and provenance, with staging and governed review before knowledge promotion.</p></li></ol></details></div></section>
 
     <!-- Code Philosophy Section -->
     <section id="code-philosophy" class="code-philosophy">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Cortex Intelligence Code Stack</h2>
-                <div class="code-philosophy-content">
+                <div class="recursive-editorial"><div class="code-philosophy-content">
                     <p>
                         At the core of Trinity Engine lies the Cortex Intelligence Code Stack — a purpose-built cognitive substrate designed to coordinate multiple reasoning archetypes into a single, coherent system. What makes Cortex unique is not a specific algorithm or model, but how it is built: the entire stack is 100% AI-authored, developed through rapid, recursive iteration with only high-level architectural intent and cognitive formalism supplied by a human architect. No low-level coding, no manual optimization, and no traditional engineering bottlenecks.
                     </p>
                     <p>
-                        The architect of Trinity Engine does not write code — in fact, could not print "hello world" if paid to do so — yet Cortex evolves with stability, consistency, and internal coherence because the system is designed to reason about its own structure as it is built. For users, this translates into a flexible cognitive shell that can adapt across domains: automation, analysis, research, synthesis, creative exploration, and decision support.
+                        Much of Trinity’s architecture has been shaped by Trinity itself through recursive design across multiple inference layers. Analysis, synthesis and review feed successive iterations, allowing the system to reason about its own structure as it develops. Human architectural direction guides this process toward a flexible cognitive workspace for automation, analysis, research, synthesis, creative exploration and decision support.
                     </p>
                     <p>
                         Cortex is not a fixed tool, but a living cognitive framework — one that learns, stabilizes, and scales alongside the problems it is applied to.
                     </p>
-                </div>
+                </div><figure class="recursive-neural"><svg viewBox="0 0 420 340" role="img" aria-label="Illustrative recursive neural network with nested inference layers and a feedback path through analysis, synthesis and review."><defs><radialGradient id="recursive-aura"><stop stop-color="#22bda5" stop-opacity=".25"/><stop offset="1" stop-color="#07151e" stop-opacity="0"/></radialGradient></defs><ellipse cx="210" cy="160" rx="185" ry="155" fill="url(#recursive-aura)"/><g fill="none" stroke="#43c7b8" stroke-width=".8"><path d="M255.0 158.0 294.9 174.1" opacity=".25"/><path d="M255.0 158.0 256.6 220.4" opacity=".25"/><path d="M255.0 158.0 283.5 118.4" opacity=".25"/><path d="M241.8 185.0 256.6 220.4" opacity=".25"/><path d="M241.8 185.0 191.0 230.2" opacity=".25"/><path d="M241.8 185.0 294.9 174.1" opacity=".25"/><path d="M210.0 196.2 191.0 230.2" opacity=".25"/><path d="M210.0 196.2 136.5 197.6" opacity=".25"/><path d="M210.0 196.2 256.6 220.4" opacity=".25"/><path d="M178.2 185.0 136.5 197.6" opacity=".25"/><path d="M178.2 185.0 125.1 141.9" opacity=".25"/><path d="M178.2 185.0 191.0 230.2" opacity=".25"/><path d="M165.0 158.0 125.1 141.9" opacity=".25"/><path d="M165.0 158.0 163.4 95.6" opacity=".25"/><path d="M165.0 158.0 136.5 197.6" opacity=".25"/><path d="M178.2 131.0 163.4 95.6" opacity=".25"/><path d="M178.2 131.0 229.0 85.8" opacity=".25"/><path d="M178.2 131.0 125.1 141.9" opacity=".25"/><path d="M210.0 119.8 229.0 85.8" opacity=".25"/><path d="M210.0 119.8 283.5 118.4" opacity=".25"/><path d="M210.0 119.8 163.4 95.6" opacity=".25"/><path d="M241.8 131.0 283.5 118.4" opacity=".25"/><path d="M241.8 131.0 294.9 174.1" opacity=".25"/><path d="M241.8 131.0 229.0 85.8" opacity=".25"/><path d="M294.9 174.1 328.5 205.4" opacity=".25"/><path d="M294.9 174.1 254.4 262.8" opacity=".25"/><path d="M294.9 174.1 333.3 120.3" opacity=".25"/><path d="M256.6 220.4 254.4 262.8" opacity=".25"/><path d="M256.6 220.4 154.2 258.7" opacity=".25"/><path d="M256.6 220.4 328.5 205.4" opacity=".25"/><path d="M191.0 230.2 154.2 258.7" opacity=".25"/><path d="M191.0 230.2 86.7 195.7" opacity=".25"/><path d="M191.0 230.2 254.4 262.8" opacity=".25"/><path d="M136.5 197.6 86.7 195.7" opacity=".25"/><path d="M136.5 197.6 91.5 110.6" opacity=".25"/><path d="M136.5 197.6 154.2 258.7" opacity=".25"/><path d="M125.1 141.9 91.5 110.6" opacity=".25"/><path d="M125.1 141.9 165.6 53.2" opacity=".25"/><path d="M125.1 141.9 86.7 195.7" opacity=".25"/><path d="M163.4 95.6 165.6 53.2" opacity=".25"/><path d="M163.4 95.6 265.8 57.3" opacity=".25"/><path d="M163.4 95.6 91.5 110.6" opacity=".25"/><path d="M229.0 85.8 265.8 57.3" opacity=".25"/><path d="M229.0 85.8 333.3 120.3" opacity=".25"/><path d="M229.0 85.8 165.6 53.2" opacity=".25"/><path d="M283.5 118.4 333.3 120.3" opacity=".25"/><path d="M283.5 118.4 328.5 205.4" opacity=".25"/><path d="M283.5 118.4 265.8 57.3" opacity=".25"/></g><g class="recursive-layer layer-0"><path d="M255.0 158.0 L241.8 185.0 L210.0 196.2 L178.2 185.0 L165.0 158.0 L178.2 131.0 L210.0 119.8 L241.8 131.0Z" fill="none" stroke="#6fe5cd" stroke-width="1" opacity=".5"/><circle class="recursive-node" style="animation-delay:-0.0s" cx="255.0" cy="158.0" r="3.0" fill="#75f5d9"/><circle class="recursive-node" style="animation-delay:-0.4s" cx="241.8" cy="185.0" r="3.0" fill="#75f5d9"/><circle class="recursive-node" style="animation-delay:-0.8s" cx="210.0" cy="196.2" r="3.0" fill="#75f5d9"/><circle class="recursive-node" style="animation-delay:-1.2000000000000002s" cx="178.2" cy="185.0" r="3.0" fill="#75f5d9"/><circle class="recursive-node" style="animation-delay:-1.6s" cx="165.0" cy="158.0" r="3.0" fill="#75f5d9"/><circle class="recursive-node" style="animation-delay:-2.0s" cx="178.2" cy="131.0" r="3.0" fill="#75f5d9"/><circle class="recursive-node" style="animation-delay:-2.4000000000000004s" cx="210.0" cy="119.8" r="3.0" fill="#75f5d9"/><circle class="recursive-node" style="animation-delay:-2.8000000000000003s" cx="241.8" cy="131.0" r="3.0" fill="#75f5d9"/></g><g class="recursive-layer layer-1"><path d="M294.9 174.1 L256.6 220.4 L191.0 230.2 L136.5 197.6 L125.1 141.9 L163.4 95.6 L229.0 85.8 L283.5 118.4Z" fill="none" stroke="#99a5e7" stroke-width="1" opacity=".5"/><circle class="recursive-node" style="animation-delay:-0.4s" cx="294.9" cy="174.1" r="3.5" fill="#abaef4"/><circle class="recursive-node" style="animation-delay:-0.8s" cx="256.6" cy="220.4" r="3.5" fill="#abaef4"/><circle class="recursive-node" style="animation-delay:-1.2000000000000002s" cx="191.0" cy="230.2" r="3.5" fill="#abaef4"/><circle class="recursive-node" style="animation-delay:-1.6s" cx="136.5" cy="197.6" r="3.5" fill="#abaef4"/><circle class="recursive-node" style="animation-delay:-2.0s" cx="125.1" cy="141.9" r="3.5" fill="#abaef4"/><circle class="recursive-node" style="animation-delay:-2.4000000000000004s" cx="163.4" cy="95.6" r="3.5" fill="#abaef4"/><circle class="recursive-node" style="animation-delay:-2.8000000000000003s" cx="229.0" cy="85.8" r="3.5" fill="#abaef4"/><circle class="recursive-node" style="animation-delay:-3.2s" cx="283.5" cy="118.4" r="3.5" fill="#abaef4"/></g><g class="recursive-layer layer-2"><path d="M328.5 205.4 L254.4 262.8 L154.2 258.7 L86.7 195.7 L91.5 110.6 L165.6 53.2 L265.8 57.3 L333.3 120.3Z" fill="none" stroke="#d1b678" stroke-width="1" opacity=".5"/><circle class="recursive-node" style="animation-delay:-0.8s" cx="328.5" cy="205.4" r="4.0" fill="#e5c78d"/><circle class="recursive-node" style="animation-delay:-1.2000000000000002s" cx="254.4" cy="262.8" r="4.0" fill="#e5c78d"/><circle class="recursive-node" style="animation-delay:-1.6s" cx="154.2" cy="258.7" r="4.0" fill="#e5c78d"/><circle class="recursive-node" style="animation-delay:-2.0s" cx="86.7" cy="195.7" r="4.0" fill="#e5c78d"/><circle class="recursive-node" style="animation-delay:-2.4000000000000004s" cx="91.5" cy="110.6" r="4.0" fill="#e5c78d"/><circle class="recursive-node" style="animation-delay:-2.8000000000000003s" cx="165.6" cy="53.2" r="4.0" fill="#e5c78d"/><circle class="recursive-node" style="animation-delay:-3.2s" cx="265.8" cy="57.3" r="4.0" fill="#e5c78d"/><circle class="recursive-node" style="animation-delay:-3.6s" cx="333.3" cy="120.3" r="4.0" fill="#e5c78d"/></g><circle cx="210" cy="158" r="25" fill="#103b42" stroke="#71e6d1"/><text x="210" y="162" text-anchor="middle" fill="#c9fff2" font-family="Inter,system-ui,sans-serif" font-size="9" letter-spacing="1">CORTEX</text><path class="recursive-feedback" d="M74 213C55 301 333 306 352 197" fill="none" stroke="#6ed9c5" stroke-width="2" stroke-dasharray="4 9"/><path d="m344 203 8-6 4 10" fill="none" stroke="#6ed9c5" stroke-width="2"/><g fill="#9ebcc5" font-family="Inter,system-ui,sans-serif" font-size="10" text-anchor="middle"><text x="210" y="24">NESTED INFERENCE LAYERS</text><text x="210" y="307">ANALYZE → SYNTHESIZE → REVIEW → REFINE</text></g></svg><figcaption><strong>Recursive refinement</strong><span>Each review informs the next iteration.</span><small>Concept animation · Not live telemetry or model-weight training.</small><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></figcaption></figure></div>
             </div>
         </div>
     </section>
@@ -348,26 +161,26 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">The n+1 Trinity Advantage</h2>
-                <div class="n-plus-one-content">
+                <div class="advantage-editorial"><div class="n-plus-one-content">
                     <p>
                         Trinity Engine operates as a sovereign cognitive layer that sits above frontier language models rather than being confined within them. This creates what we call the n+1 advantage: regardless of how capable an underlying model becomes (n), Trinity adds an additional, persistent layer of reasoning (+1) that remains under user control. Instead of accepting a single model's output as the final cognitive authority, Trinity reframes the process—capturing context, memory, intent, and synthesis across time, then presenting the result back to the user for judgment. As foundation models improve, Trinity improves alongside them, not by competing at the same layer, but by orchestrating, stabilizing, and contextualizing their outputs. The final decision is no longer outsourced to a transient model response; it is returned to the user, supported by a coherent cognitive system that persists beyond any single interaction or model generation.
                     </p>
-                </div>
+                </div><figure class="advantage-visual"><svg viewBox="0 0 420 350" role="img" aria-label="n plus one architecture: foundation models support Trinity's persistent context, memory and reasoning layer; human judgment directs the outcome."><defs><linearGradient id="advantage-fill" x2="1" y2="1"><stop stop-color="#123f45"/><stop offset="1" stop-color="#102631"/></linearGradient></defs><path class="advantage-signal" d="M90 278V244H210V205M210 278V205M330 278V244H210M210 132V90" fill="none" stroke="#5fd9c3" stroke-width="1.5" stroke-dasharray="3 7"/><rect x="103" y="34" width="214" height="56" rx="8" fill="#202b2d" stroke="#b59f69"/><circle cx="131" cy="60" r="10" fill="none" stroke="#e0c581"/><path d="m127 60 3 3 6-7" fill="none" stroke="#e0c581"/><g font-family="Inter,system-ui,sans-serif" text-anchor="middle"><text x="222" y="58" fill="#e8d9b0" font-size="12">HUMAN JUDGMENT</text><text x="222" y="76" fill="#a5b9bd" font-size="9">Direction · Review · Decision</text><rect x="35" y="132" width="350" height="83" rx="10" fill="url(#advantage-fill)" stroke="#5ddac4"/><text x="77" y="181" fill="#90f4d8" font-size="31" font-weight="600">+1</text><text x="241" y="159" fill="#dcf6ee" font-size="13" letter-spacing="1">TRINITY ENGINE</text><text x="241" y="179" fill="#a3c7cd" font-size="10">Context · Memory · Intent</text><text x="241" y="196" fill="#a3c7cd" font-size="10">Reasoning · Governance</text><rect x="35" y="267" width="110" height="47" rx="6" fill="#111e2c" stroke="#596182"/><text x="90" y="287" fill="#c4c9e5" font-size="11">MODEL A</text><text x="90" y="303" fill="#8599b2" font-size="9">Foundation capability</text><rect x="155" y="267" width="110" height="47" rx="6" fill="#111e2c" stroke="#596182"/><text x="210" y="287" fill="#c4c9e5" font-size="11">MODEL B</text><text x="210" y="303" fill="#8599b2" font-size="9">Foundation capability</text><rect x="275" y="267" width="110" height="47" rx="6" fill="#111e2c" stroke="#596182"/><text x="330" y="287" fill="#c4c9e5" font-size="11">MODEL …</text><text x="330" y="303" fill="#8599b2" font-size="9">Foundation capability</text><text x="210" y="338" fill="#899eb9" font-size="10">n — THE MODELS CAN CHANGE</text></g></svg><figcaption><strong>Better models. Persistent context.</strong><span>The +1 is a continuing architectural layer, not a numerical performance score.</span><small>Concept illustration · Not a live system connection.</small><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></figcaption></figure></div>
             </div>
         </div>
     </section>
 
     <!-- Singularity Explanation Section -->
-    <section class="singularity-explanation">
+    <section class="singularity-explanation" id="singularity-event">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">The Singularity Event</h2>
-                <p class="section-description">
-                    The Singularity is not an agent or controller—it is a stabilizing event that occurs when perspectives must converge. 
-                    When deep pattern analysis and creative exploration diverge significantly, coherence emerges through structured convergence. 
-                    This event ensures balanced, practical responses while preserving the strengths of both perspectives. 
-                    Safety comes from structure, not restriction.
-                </p>
+                <div class="singularity-editorial"><div class="singularity-copy"><p class="section-description">
+                    The Singularity is not an agent or controller—it is a stabilizing event that occurs when perspectives must converge.
+                    When deep pattern analysis and creative exploration diverge significantly, coherence emerges through structured convergence.
+                    This event ensures balanced, practical responses while preserving the strengths of both perspectives.
+                    ENG, SYNTH and PRIME preserve their distinct roles within a governed reasoning cycle.
+                </p></div><figure class="singularity-visual"><svg viewBox="0 0 440 350" role="img" aria-label="Trinity Singularity concept: distinct ENG analysis and SYNTH exploration paths converge through PRIME review and emerge as a coherent response."><defs><radialGradient id="singularity-aura"><stop stop-color="#e5d6a0" stop-opacity=".5"/><stop offset=".3" stop-color="#61dcca" stop-opacity=".2"/><stop offset="1" stop-color="#0b1822" stop-opacity="0"/></radialGradient><radialGradient id="singularity-core"><stop stop-color="#fffbe5"/><stop offset=".4" stop-color="#e5ce8a"/><stop offset="1" stop-color="#62d9c5"/></radialGradient></defs><ellipse cx="234" cy="166" rx="154" ry="143" fill="url(#singularity-aura)"/><path class="convergence-stream teal-stream" style="animation-delay:-0.0s" d="M32 62C138 47 146 160 230 166" fill="none" stroke="#5fe3c9" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream violet-stream" style="animation-delay:-0.0s" d="M32 216C138 231 146 172 230 166" fill="none" stroke="#b7a1f0" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream teal-stream" style="animation-delay:-0.3s" d="M32 74C138 59 146 160 230 166" fill="none" stroke="#5fe3c9" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream violet-stream" style="animation-delay:-0.3s" d="M32 228C138 243 146 172 230 166" fill="none" stroke="#b7a1f0" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream teal-stream" style="animation-delay:-0.6s" d="M32 86C138 71 146 160 230 166" fill="none" stroke="#5fe3c9" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream violet-stream" style="animation-delay:-0.6s" d="M32 240C138 255 146 172 230 166" fill="none" stroke="#b7a1f0" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream teal-stream" style="animation-delay:-0.8999999999999999s" d="M32 98C138 83 146 160 230 166" fill="none" stroke="#5fe3c9" stroke-width="1.8" opacity="0.8"/><path class="convergence-stream violet-stream" style="animation-delay:-0.8999999999999999s" d="M32 252C138 267 146 172 230 166" fill="none" stroke="#b7a1f0" stroke-width="1.8" opacity="0.8"/><path class="convergence-stream teal-stream" style="animation-delay:-1.2s" d="M32 110C138 95 146 160 230 166" fill="none" stroke="#5fe3c9" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream violet-stream" style="animation-delay:-1.2s" d="M32 264C138 279 146 172 230 166" fill="none" stroke="#b7a1f0" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream teal-stream" style="animation-delay:-1.5s" d="M32 122C138 107 146 160 230 166" fill="none" stroke="#5fe3c9" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream violet-stream" style="animation-delay:-1.5s" d="M32 276C138 291 146 172 230 166" fill="none" stroke="#b7a1f0" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream teal-stream" style="animation-delay:-1.7999999999999998s" d="M32 134C138 119 146 160 230 166" fill="none" stroke="#5fe3c9" stroke-width="0.8" opacity="0.35"/><path class="convergence-stream violet-stream" style="animation-delay:-1.7999999999999998s" d="M32 288C138 303 146 172 230 166" fill="none" stroke="#b7a1f0" stroke-width="0.8" opacity="0.35"/><g fill="none" stroke="#e1c580"><ellipse cx="234" cy="166" rx="46" ry="71" transform="rotate(35 234 166)" opacity=".4"/><ellipse cx="234" cy="166" rx="46" ry="71" transform="rotate(-35 234 166)" opacity=".4"/><circle class="singularity-halo" cx="234" cy="166" r="58" opacity=".4" stroke-dasharray="2 9"/></g><circle cx="234" cy="166" r="17" fill="url(#singularity-core)"/><path class="coherence-stream" d="M254 166H403" fill="none" stroke="#d6edcd" stroke-width="2"/><path d="m396 160 7 6-7 6" fill="none" stroke="#d6edcd" stroke-width="1.5"/><g font-family="Inter,system-ui,sans-serif"><text x="32" y="39" fill="#71e8d2" font-size="11" letter-spacing="1">ENG / ANALYSIS</text><text x="32" y="320" fill="#bdabec" font-size="11" letter-spacing="1">SYNTH / EXPLORATION</text><text x="234" y="69" text-anchor="middle" fill="#e3cf96" font-size="10">PRIME / REVIEW</text><text x="335" y="144" text-anchor="middle" fill="#d8ede5" font-size="10">COHERENT</text><text x="335" y="198" text-anchor="middle" fill="#d8ede5" font-size="10">RESPONSE</text></g></svg><figcaption><strong>Distinct perspectives. Structured convergence.</strong><span>Analysis and synthesis retain their roles as review brings the response into focus.</span><small>Concept animation · Not a measured divergence event.</small><a class="ellis-footnote-sigil" href="#ellis" aria-label="ELLIS — The Link"><img src="assets/ellis-link-sigil.png" width="23" height="28" alt="" loading="lazy"></a></figcaption></figure></div>
             </div>
         </div>
     </section>
@@ -376,49 +189,49 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Cognitive Perspectives</h2>
+                <h2 class="section-title">Three perspectives. A considered response.</h2>
                 <p class="section-description">
                     Multiple perspectives work together to produce coherent understanding through structured interaction
                 </p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🐙</div>
-                    <h3 class="feature-title">Octopus: Deep Pattern Awareness</h3>
+                    <div class="feature-icon concept-symbol" style="--symbol-color:#57d9da" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 43V23h20v20M30 17v32M17 33h26"/><path d="m23 24 7-7 7 7"/><circle cx="20" cy="43" r="3"/><circle cx="40" cy="43" r="3"/></svg></div>
+                    <h3 class="feature-title">ENG · Engineering & Analysis</h3>
                     <p class="feature-description">
                         Structured analysis that identifies requirements, edge cases, and potential failure modes through rigorous logical reasoning and pattern recognition.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🦝</div>
-                    <h3 class="feature-title">Raccoon: Exploratory Curiosity</h3>
+                    <div class="feature-icon concept-symbol" style="--symbol-color:#ba9bea" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20Q30 20 30 32T44 44M44 20Q30 20 30 32T16 44"/><circle cx="16" cy="20" r="4"/><circle cx="44" cy="20" r="4"/><circle cx="16" cy="44" r="4"/><circle cx="44" cy="44" r="4"/><circle cx="30" cy="32" r="5"/></svg></div>
+                    <h3 class="feature-title">SYNTH · Synthesis & Exploration</h3>
                     <p class="feature-description">
                         Creative hypothesis generation that explores connections across domains, generating novel interpretations and unexpected perspectives through exploratory thinking.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🌀</div>
-                    <h3 class="feature-title">Singularity: Coherence Event</h3>
+                    <div class="feature-icon concept-symbol" style="--symbol-color:#e5c374" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 19Q30 19 30 31M47 19Q30 19 30 31M30 31v15"/><circle cx="13" cy="19" r="3"/><circle cx="47" cy="19" r="3"/><path d="m22 36 6 6 13-15"/><circle cx="30" cy="31" r="17" stroke-dasharray="2 5"/></svg></div>
+                    <h3 class="feature-title">PRIME · Arbitration & Review</h3>
                     <p class="feature-description">
-                        When perspectives diverge significantly, a stabilizing event occurs—coherence emerges through structured convergence, not through an agent's decision. This event resolves tensions and produces balanced responses.
+                        PRIME reviews competing perspectives. Divergence guides method selection; a Singularity event describes structured convergence when perspectives require arbitration.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
+                    <div class="feature-icon concept-symbol" style="--symbol-color:#64dcc0" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 20h16l10 12-10 12H22L12 32Z"/><path d="m22 20 8 12-8 12M38 20l-8 12 8 12"/><circle cx="30" cy="32" r="5"/><path d="M8 21v-8h8M52 43v8h-8"/></svg></div>
                     <h3 class="feature-title">Local Continuity</h3>
                     <p class="feature-description">
-                        Maintains persistent understanding across sessions, preserving context and continuity from your interactions without global learning or uncontrolled modification.
+                        Maintains persistent understanding across sessions, preserving context and continuity from your interactions through memory tiers and DreamCycle consolidation, with governed staging and provenance.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <div class="feature-icon concept-symbol" style="--symbol-color:#77bfff" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 32h10m0 0 14-14h12M22 32l14 14h12M22 32h26"/><circle cx="12" cy="32" r="3"/><circle cx="48" cy="18" r="3"/><circle cx="48" cy="32" r="3"/><circle cx="48" cy="46" r="3"/></svg></div>
                     <h3 class="feature-title">Divergence-Based Response</h3>
                     <p class="feature-description">
                         Response selection based on query characteristics and perspective alignment. When perspectives converge, coherence emerges naturally. When they diverge, a Singularity event ensures balanced outcomes.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔮</div>
+                    <div class="feature-icon concept-symbol" style="--symbol-color:#b3a3f0" aria-hidden="true"><svg viewBox="0 0 60 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m30 11 17 10v22L30 53 13 43V21Z"/><path d="m30 11 0 21m17-11L30 32l17 11M30 53V32L13 43m0-22 17 11"/><circle cx="30" cy="32" r="6"/></svg></div>
                     <h3 class="feature-title">Cognitive Modes</h3>
                     <p class="feature-description">
                         Structured thinking modes from precise technical analysis to creative exploration, selected based on your needs and query characteristics.
@@ -429,7 +242,7 @@
     </section>
 
     <!-- Lightbox Modal for Full-Size Images -->
-    <div id="image-lightbox" class="lightbox" aria-hidden="true">
+    <div id="image-lightbox" role="dialog" aria-modal="true" aria-label="Workspace diagram viewer" class="lightbox" aria-hidden="true">
         <div class="lightbox-content">
             <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
             <img id="lightbox-image" src="" alt="">
@@ -437,80 +250,16 @@
         </div>
     </div>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-description">
-                    Choose the plan that fits your needs
-                </p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-tier">Starter</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount">$29</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ 1,000 queries/month</li>
-                        <li>✓ Basic local continuity</li>
-                        <li>✓ Standard cognitive modes</li>
-                        <li>✓ Email support</li>
-                    </ul>
-                    <a href="#signup" class="btn-pricing">Join Waitlist</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-tier">Professional</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount">$99</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ 10,000 queries/month</li>
-                        <li>✓ Enhanced local continuity</li>
-                        <li>✓ All cognitive modes</li>
-                        <li>✓ Priority support</li>
-                        <li>✓ API access</li>
-                    </ul>
-                    <a href="#signup" class="btn-pricing-secondary">Join Waitlist</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-tier">Enterprise</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount">Custom</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Unlimited queries</li>
-                        <li>✓ Complete local continuity</li>
-                        <li>✓ Custom integrations</li>
-                        <li>✓ Dedicated support</li>
-                        <li>✓ On-premise deployment</li>
-                    </ul>
-                    <a href="#contact" class="btn-pricing">Contact Sales</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Waitlist Section -->
     <section id="signup" class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Join the Waitlist</h2>
                 <p class="cta-description">
-                    Trinity Engine is currently in development. Join our waitlist to be notified when Cat_Production is released.
+                    Trinity Engine is currently in development. Join our waitlist to be notified when Trinity Engine is released.
                 </p>
                 <div class="cta-form">
-                    <input type="email" placeholder="Enter your email" class="cta-input">
+                    <input type="email" aria-label="Email address" autocomplete="email" required placeholder="Enter your email" class="cta-input">
                     <button class="btn-secondary-large">Join Waitlist</button>
                 </div>
                 <p class="cta-note">We'll notify you when Trinity Engine is ready • No spam, unsubscribe anytime</p>
@@ -523,32 +272,32 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-icon">🌀</span>
+                    <span class="logo-icon" aria-hidden="true">ᛉ</span>
                     <span class="logo-text">Trinity Engine</span>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Product</h4>
                         <a href="#features">Features</a>
-                        <a href="#pricing">Pricing</a>
+                        <a href="#raven">Raven</a>
                         <a href="roadmap.html">Roadmap</a>
                     </div>
                     <div class="footer-column">
                         <h4>Resources</h4>
-                        <a href="#docs">Documentation</a>
-                        <a href="#api">API Reference</a>
-                        <a href="#blog">Blog</a>
+                        <a href="#cognitive-landscape">How it fits together</a>
+                        <a href="#architecture">Architecture Preview</a>
+                        <a href="roadmap.html">Development Roadmap</a>
                     </div>
                     <div class="footer-column">
                         <h4>Company</h4>
-                        <a href="#about">About</a>
+                        <a href="#n-plus-one">About</a>
                         <a href="mailto:v12trinityengine@gmail.com">Contact</a>
-                        <a href="#careers">Careers</a>
+                        <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Trinity Engine. All rights reserved.</p>
+            <a class="ellis-site-mark" href="#ellis" aria-label="ELLIS — The Link: symbolic identity and provenance"><img src="assets/ellis-link-sigil.png" width="28" height="34" alt=""><span>ELLIS <small>THE LINK</small></span></a><div class="footer-bottom">
+                <p>&copy; 2026 Trinity Engine. All rights reserved.</p>
                 <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">
                     <a href="mailto:v12trinityengine@gmail.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">v12trinityengine@gmail.com</a>
                 </p>
@@ -556,6 +305,9 @@
         </div>
     </footer>
 
+    <script src="navigation.js"></script>
+    <script src="topology.js"></script>
+    <script src="architecture.js"></script>
     <script src="script.js"></script>
     <script src="assets/ui-showcase.js"></script>
 </body>

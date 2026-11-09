@@ -1,0 +1,27 @@
+/* ELLIS: visible symbolic identity, with shared semantics across pages. */
+.ellis-site-mark{display:inline-flex;align-items:center;gap:9px;padding:10px 0;color:#d4b8bc;font:10px/1.4 Inter,system-ui,sans-serif;letter-spacing:.12em;text-decoration:none}.ellis-site-mark img{width:28px;height:34px;object-fit:contain;border-radius:4px}.ellis-site-mark small{display:block;font-size:8px;color:#9e878e;margin-top:2px}.ellis-context-mark{display:flex;align-items:center;justify-content:flex-end;gap:7px;width:max-content;margin:14px 0 10px auto;color:#a98e96;text-decoration:none;font:8px/1.5 Inter,system-ui,sans-serif;letter-spacing:.1em}.ellis-context-mark img{width:20px;height:25px;object-fit:contain;border-radius:3px;opacity:.8}.ellis-feature{padding:44px 0;background:linear-gradient(110deg,#23131a66,#0a151e 65%);border-block:1px solid #49303c}.ellis-layout{display:grid;grid-template-columns:110px 1fr;gap:30px;align-items:start}.ellis-portrait{display:block;width:110px;height:auto;border:1px solid #5f303b;border-radius:9px}.ellis-feature h2{font-size:clamp(23px,3vw,33px);line-height:1.3;letter-spacing:-.03em;color:#e4d8dd;margin:8px 0 16px}.ellis-feature .eyebrow{color:#d292a2;font-size:9px;letter-spacing:.12em}.ellis-lead{font-size:14px;line-height:1.85;color:#b8c5cd;max-width:880px}.ellis-principles{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.ellis-principles span{padding:7px 10px;border:1px solid #583640;border-radius:4px;color:#cfadb6;font-size:8px;letter-spacing:.08em}.ellis-feature details{margin-top:18px;font-size:12px;color:#aabdc7;line-height:1.8}.ellis-feature summary{cursor:pointer;color:#d2a4b0;font-size:11px}.ellis-feature details p{margin-top:12px;max-width:900px}.ellis-site-mark:focus-visible,.ellis-context-mark:focus-visible{outline:2px solid #e2c17d;outline-offset:4px}@media(max-width:550px){.ellis-layout{grid-template-columns:60px 1fr;gap:16px}.ellis-portrait{width:60px}.ellis-feature{padding:32px 0}.ellis-lead{font-size:13px}}
+
+/* Sparse, non-interactive decorative recurrence on supporting pages. */
+.ellis-ambient-page{background-image:linear-gradient(#09131aef,#09131aef),url('ellis-link-sigil.png');background-size:auto,190px 234px;background-position:center,calc(100% - 24px) 190px;background-repeat:no-repeat,no-repeat}
+.ellis-margin-mark{display:block;float:right;width:26px;height:32px;margin:8px 0 4px 16px;opacity:.13;pointer-events:none;user-select:none}.ellis-margin-mark img{display:block;width:26px;height:32px;object-fit:contain;filter:grayscale(.6)}
+.ellis-roadmap-motif article{isolation:isolate}.ellis-roadmap-motif article::after{content:'';position:absolute;right:17px;bottom:18px;width:42px;height:52px;background:url('ellis-link-sigil.png') center/contain no-repeat;opacity:.09;filter:grayscale(.5);pointer-events:none;z-index:-1}
+@media(max-width:550px){.ellis-ambient-page{background-size:auto,110px 136px;background-position:center,right 140px}.ellis-margin-mark{opacity:.1;width:22px;height:27px}.ellis-margin-mark img{width:22px;height:27px}}
+
+.ellis-media-footnote{display:flex;justify-content:flex-end;padding:0 13px 8px;margin-top:auto;min-height:32px}
+.ellis-footnote-sigil{display:block;width:23px;height:28px;margin:8px 0 0 auto;opacity:.13;transition:opacity .2s;border-radius:3px}
+.ellis-footnote-sigil img{display:block;width:23px;height:28px;object-fit:contain;filter:grayscale(.8)}
+.ellis-footnote-sigil:hover,.ellis-footnote-sigil:focus-visible{opacity:.5}.ellis-footnote-sigil:focus-visible{outline:1px solid #d8c18a;outline-offset:3px}
+.manifold-gallery .ellis-media-footnote{grid-column:1/-1;margin:0;padding-top:0}
+@media(prefers-reduced-motion:reduce){.ellis-footnote-sigil{transition:none}}
+
+.ellis-watermarked-art{position:relative}.ellis-watermarked-art>a:first-child{display:block}
+#cognitive-neuron .ellis-art-watermark{position:absolute;right:3%;bottom:8%;width:clamp(26px,4.3vw,48px);opacity:.14;display:block;transition:opacity .2s}
+#cognitive-neuron .ellis-art-watermark img{display:block;width:100%;height:auto;border:0;border-radius:0;filter:grayscale(.85);mix-blend-mode:screen}
+#cognitive-neuron .ellis-art-watermark:hover,#cognitive-neuron .ellis-art-watermark:focus-visible{opacity:.45}
+@media(prefers-reduced-motion:reduce){#cognitive-neuron .ellis-art-watermark{transition:none}}
+
+.ellis-ui-watermark{position:absolute;right:3%;bottom:5%;width:clamp(22px,3vw,38px);height:auto;opacity:.13;pointer-events:none;user-select:none;z-index:2;line-height:0}
+.ui-card-image>.ellis-ui-watermark{right:14px;bottom:52px}
+/* Reset image-frame crop rules so the overlay remains a separate, correctly sized mark. */
+.ui-card-image>.ellis-ui-watermark>img,.ellis-watermarked-art>.ellis-ui-watermark>img{position:static!important;display:block!important;width:100%!important;height:auto!important;max-width:100%!important;left:auto!important;top:auto!important;object-fit:contain!important;transform:none!important;border:0!important;border-radius:0!important;margin:0!important;filter:grayscale(.85)!important}
+.ui-card-image:hover>.ellis-ui-watermark>img{transform:none!important}

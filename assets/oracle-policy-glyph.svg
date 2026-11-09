@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><title>Oracle Policy — Oracle and Scribe glyph</title><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="128" cy="128" r="106" stroke="#66ddc9" stroke-width="1.4" opacity=".3"/>
+<path d="M49 77A94 94 0 0 1 207 77" stroke="#d9ba77" stroke-width="2"/>
+<path d="M128 28v12m-8-6h16" stroke="#d9ba77" stroke-width="2"/>
+<path d="M91 79h74l-9 17H100Z" stroke="#d9ba77" stroke-width="4"/>
+<path d="m105 96-17 59m63-59 17 59m-40-59v42" stroke="#d9ba77" stroke-width="4"/>
+<path d="M72 148h112v65H72Z" fill="#0e2530" stroke="#68decc" stroke-width="3"/>
+<path d="M128 151v58M84 163h31m-31 12h24m-24 12h29m28 13 36-40 6 6-36 40-10 4Z" stroke="#68decc" stroke-width="3"/>
+<path d="m107 128 12 10 27-26" stroke="#d9ba77" stroke-width="3"/>
+<circle cx="52" cy="128" r="3" fill="#68decc" stroke="none"/><circle cx="204" cy="128" r="3" fill="#68decc" stroke="none"/>
+</g></svg>
