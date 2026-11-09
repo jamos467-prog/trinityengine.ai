@@ -1,59 +1,29 @@
-# Trinity Engine Landing Page
+# Trinity Engine website
 
-A modern, responsive landing page for the Trinity Engine SaaS platform, featuring the same dark aesthetic and cyan accent colors as the desktop application.
+A buildless, static HTML/CSS/JavaScript website for the current Trinity / Yggdrasil product. It explains the Cortex, Raven Agent and System Status groups. The website is not connected to the cognitive runtime.
 
-## Features
+## Files
+- `index.html`: product overview, illustrative topology, subsystem architecture, workspace diagrams, Raven, reasoning and waitlist.
+- `architecture.js/.css`: architecture views, sample Cockpit, rune modes and local evidence-staging preview.
+- `topology.js`: keyboard-accessible illustrative graph and synthetic bathymetry.
+- `refresh.css`, `landscape.css`: responsive corporate visual system and architecture diagrams.
+- `navigation.js`: collapsed navigation below 1100px.
+- `assets/ui-showcase.*`: diagram gallery and keyboard-accessible lightbox.
+- `roadmap.html`, `privacy.html`, `terms.html`: supporting pages.
 
-- **Modern Design**: Dark theme with cyan accents matching Trinity Engine UI
-- **Responsive**: Fully responsive design for all device sizes
-- **Smooth Animations**: Intersection Observer for fade-in effects and smooth scrolling
-- **Interactive Elements**: Hover effects, parallax scrolling, and animated cognitive ring visualization
+## Local preview
+From the project root, run `python -m http.server 8877 --bind 127.0.0.1`. Open the local address printed by Python. This static server does not run the waitlist API.
 
-## File Structure
+## Boundaries
+All graph positions, sample Cockpit tasks and gauges are illustrative. Rune selections and evidence notes affect page-session state only. No model execution, service control or system-of-record writes occur. Governed promotion is disabled. App capture placeholders are explicitly marked and must be replaced only with fresh, sanitized captures at least 1600px wide. Do not expose private paths, telemetry, keys or gateway addresses in public assets.
 
-```
-C:\Dev\SaaS\
-├── index.html      # Main HTML structure
-├── styles.css      # All styling and animations
-├── script.js       # Interactive functionality
-└── README.md       # This file
-```
+The old desktop gallery and pricing were removed at the owner's request. The Code Stack authorship copy remains unchanged. The original conceptual infographic is available as a reference, distinct from product screenshots.
 
-## Customization
+## Waitlist and deployment
+The existing form uses `window.WAITLIST_API_URL` when configured, otherwise `/api/waitlist`. Python sources and deployment configuration are preserved. The repository contains a GitHub Pages workflow and Vercel configuration, plus optional Google Cloud waitlist code; these are separate deployment paths. A static server alone cannot validate email persistence or notification delivery.
 
-### Colors
-Edit the CSS variables in `styles.css`:
-- `--accent-cyan`: Primary accent color (#33e7ff)
-- `--bg-primary`: Main background color
-- `--text-primary`: Primary text color
+## Release gate
+Do not deploy production before owner approval. Deploy a Vercel preview, test waitlist submission there, capture sanitized current-app screenshots, verify 1440/1024/768/390 layouts, and run mobile/desktop Lighthouse (performance >=85, accessibility >=95, SEO >=95). Record actual scores; static checks do not establish those scores. No production release or public hosting changes are part of the prepared source update.
 
-### Content
-Update the HTML in `index.html`:
-- Hero section text
-- Feature descriptions
-- Pricing tiers
-- Footer links
-
-### Functionality
-Modify `script.js` to:
-- Connect CTA form to your backend
-- Add analytics tracking
-- Customize animations
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Deployment
-
-Simply upload all files to your web server. No build process required.
-
-For production:
-1. Minify CSS and JavaScript
-2. Optimize images (if added)
-3. Add analytics tracking
-4. Set up form submission endpoint
-
+## Approved visual rebuild
+The owner requested publication of the visual rebuild in this session. The existing GitHub Pages deployment configuration is preserved. Local waitlist data and credentials remain ignored by Git. The static Pages host does not provide the Python waitlist endpoint; a configured external API is required for submissions.

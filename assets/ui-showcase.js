@@ -1,69 +1,17 @@
-// UI Showcase Lightbox Functionality
-
-document.addEventListener('DOMContentLoaded', function() {
-    const lightbox = document.getElementById('image-lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const zoomButtons = document.querySelectorAll('.ui-card-zoom');
-    
-    // Open lightbox
-    zoomButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const card = this.closest('.ui-card');
-            const img = card.querySelector('.ui-card-image img');
-            const title = card.querySelector('.ui-card-title').textContent;
-            const description = card.querySelector('.ui-card-description').textContent;
-            
-            lightboxImage.src = img.src;
-            lightboxImage.alt = img.alt;
-            lightboxCaption.textContent = `${title} - ${description}`;
-            lightbox.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    // Close lightbox
-    function closeLightbox() {
-        lightbox.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        lightboxImage.src = '';
-        lightboxCaption.textContent = '';
-    }
-    
-    lightboxClose.addEventListener('click', closeLightbox);
-    
-    // Close on background click
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
-    
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && lightbox.getAttribute('aria-hidden') === 'false') {
-            closeLightbox();
-        }
-    });
-    
-    // Also allow clicking the card image to open lightbox
-    document.querySelectorAll('.ui-card-image img').forEach(img => {
-        img.addEventListener('click', function() {
-            const card = this.closest('.ui-card');
-            const title = card.querySelector('.ui-card-title').textContent;
-            const description = card.querySelector('.ui-card-description').textContent;
-            
-            lightboxImage.src = this.src;
-            lightboxImage.alt = this.alt;
-            lightboxCaption.textContent = `${title} - ${description}`;
-            lightbox.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        // Add cursor pointer
-        img.style.cursor = 'pointer';
-    });
+document.addEventListener('DOMContentLoaded', () => {
+ const box=document.getElementById('image-lightbox');if(!box)return;
+ const image=document.getElementById('lightbox-image'),caption=document.getElementById('lightbox-caption'),close=box.querySelector('.lightbox-close');let previous;
+ function open(card,trigger){previous=trigger;const source=card.querySelector('img');image.src=source.src;image.alt=source.alt;caption.textContent=`${card.querySelector('.ui-card-title').textContent} — ${card.querySelector('.ui-card-description').textContent} ${card.dataset.mediaKind==='illustration'?'Concept illustration; not an app screenshot.':card.dataset.mediaKind==='concept'?'Proposed visual update; edited from a system screenshot.':card.dataset.mediaKind==='screenshot'?'Actual system screenshot.':'Interface diagram; fresh capture pending.'}`;box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus();}
+ function shut(){box.setAttribute('aria-hidden','true');document.body.style.overflow='';image.removeAttribute('src');previous?.focus();}
+ document.querySelectorAll('.ui-card-zoom').forEach(button=>button.addEventListener('click',()=>open(button.closest('.ui-card'),button)));
+ close.addEventListener('click',shut);box.addEventListener('click',e=>{if(e.target===box)shut();});
+ document.addEventListener('keydown',e=>{if(box.getAttribute('aria-hidden')==='false'){if(e.key==='Escape')shut();if(e.key==='Tab'){e.preventDefault();close.focus();}}});
 });
 
+document.addEventListener('DOMContentLoaded',()=>{
+ const controls=[...document.querySelectorAll('[data-manifold-view]')];
+ function selectView(id){controls.forEach(button=>{const active=button.dataset.manifoldView===id;button.setAttribute('aria-pressed',String(active));document.getElementById(button.dataset.manifoldView).hidden=!active;});}
+ controls.forEach(button=>button.addEventListener('click',()=>selectView(button.dataset.manifoldView)));
+ function revealHash(){const id=location.hash.slice(1);if(controls.some(b=>b.dataset.manifoldView===id))selectView(id);}
+ window.addEventListener('hashchange',revealHash);revealHash();
+});

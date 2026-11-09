@@ -258,3 +258,60 @@
     }
 }
 
+
+/* Preserve the complete supplied system capture at every viewport. */
+.workspace-grid .screenshot-card { grid-column: 1 / -1; }
+.workspace-card.screenshot-card .ui-card-image { padding-top: 44.21%; }
+.workspace-card.screenshot-card .ui-card-image img { object-fit: contain; }
+.workspace-card.screenshot-card:hover .ui-card-image img { transform: none; }
+
+.axis-captures{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:20px;align-items:start}
+.axis-captures .ui-card-image img{object-fit:contain}
+.axis-captures .ui-card:hover .ui-card-image img{transform:none}
+.axis-detail-capture .ui-card-image{padding-top:91.3%}
+@media(max-width:700px){.axis-captures{grid-template-columns:minmax(0,1fr)}}
+
+.workspace-card.instruments-capture .ui-card-image{padding-top:42.77%}
+.workspace-card.instruments-capture .ui-card-image img{object-fit:contain}
+.workspace-card.instruments-capture:hover .ui-card-image img{transform:none}
+
+#workspace-raven-chat .ui-card-image{padding-top:43.9%}
+#workspace-raven-chat .ui-card-image img{object-fit:contain}
+#workspace-raven-chat:hover .ui-card-image img{transform:none}
+
+.workspace-grid .analytics-capture{grid-column:1/-1}
+.workspace-card.analytics-capture .ui-card-image{padding-top:44.35%}
+.workspace-card.analytics-capture .ui-card-image img{object-fit:contain}
+.workspace-card.analytics-capture:hover .ui-card-image img{transform:none}
+
+.workspace-grid #workspace-cockpit.analytics-capture{grid-column:auto}
+.analytics-anchor{display:block;scroll-margin-top:100px}
+
+.workspace-card.ltkg-capture .ui-card-image{padding-top:48.74%}
+.workspace-card.ltkg-capture .ui-card-image img{object-fit:contain}
+.workspace-card.ltkg-capture:hover .ui-card-image img{transform:none}
+
+.workspace-card.cycle-capture .ui-card-image{padding-top:46.39%}
+.workspace-card.cycle-capture .ui-card-image img{object-fit:contain}
+.workspace-card.cycle-capture:hover .ui-card-image img{transform:none}
+
+#workspace-yggdrasil .ui-card-image{padding-top:56.28%;background:#06141c}
+#workspace-yggdrasil .ui-card-image img{object-fit:contain}
+#workspace-yggdrasil:hover .ui-card-image img{transform:none}
+
+#workspace-yggdrasil .ui-card-image{padding-top:56.04%}
+.yggdrasil-art-reference{margin-top:16px;border-top:1px solid #2c4351;padding-top:12px}
+.yggdrasil-art-reference summary{cursor:pointer;color:#8ee1d5;font-size:12px}
+.yggdrasil-art-reference img{display:block;width:100%;height:auto;margin-top:12px;border-radius:6px}
+
+/* Frame the State Weaver panel from the actual Yggdrasil capture. */
+#workspace-state-weaver .ui-card-image{width:100%;padding-top:118.24%;background:#0e171e}
+#workspace-state-weaver .ui-card-image img{width:429.245%;height:203.46%;max-width:none;left:-326.415%;top:-16.49%;object-fit:fill;transform:none}
+#workspace-state-weaver:hover .ui-card-image img{transform:none}
+
+.workspace-card.process-capture .ui-card-image{padding-top:55.73%}
+.workspace-card.process-capture .ui-card-image img{object-fit:contain}
+.workspace-card.process-capture:hover .ui-card-image img{transform:none}
+
+#workspace-state-weaver .ui-card-image{padding-top:82%;background:#0e171e}
+#workspace-state-weaver .ui-card-image img{width:100%;height:100%;left:0;top:0;object-fit:contain;transform:none}
