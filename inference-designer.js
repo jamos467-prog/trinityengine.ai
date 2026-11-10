@@ -48,7 +48,7 @@
     const payloads=contracts(s);$('request-json').textContent=JSON.stringify(payloads.request,null,2);$('response-json').textContent=JSON.stringify(payloads.response,null,2);
   }
   function preset(name) {
-    const common={'local-runtime':'Ollama','local-model':'your-local-model','worker-provider':'DeepSeek','worker-model':'deepseek-flash','file-scope':'scoped-local','eng-provider':'OpenAI-compatible API','eng-model':'eng-model','synth-provider':'Anthropic API via adapter','synth-model':'synth-model','prime-provider':'OpenAI-compatible API','prime-model':'prime-model','scenario-route':'agent','total-calls':'5','engine-calls':'2'};
+    const common={'local-runtime':'Ollama','local-model':'your-local-model','worker-provider':'DeepSeek','worker-model':'deepseek-chat','file-scope':'scoped-local','eng-provider':'OpenAI-compatible API','eng-model':'eng-model','synth-provider':'Anthropic API via adapter','synth-model':'synth-model','prime-provider':'OpenAI-compatible API','prime-model':'prime-model','scenario-route':'agent','total-calls':'5','engine-calls':'2'};
     if(name==='local')Object.assign(common,{'eng-provider':'Local model via adapter','synth-provider':'Local model via adapter','prime-provider':'Local model via adapter','scenario-route':'local','file-scope':'none'});
     if(name==='ensemble')Object.assign(common,{'eng-provider':'DeepSeek','synth-provider':'Anthropic API via adapter','prime-provider':'OpenAI-compatible API','total-calls':'8','engine-calls':'3'});
     for(const [id,value] of Object.entries(common))$(id).value=value;

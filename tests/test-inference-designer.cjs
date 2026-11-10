@@ -8,7 +8,7 @@ for(let total=1;total<=12;total++)for(let count=0;count<=total;count++){
 }
 const indices=consultationIndices(5,2);
 assert.equal(Array.from({length:5},(_,i)=>describeCall(i,5,indices,base)).filter(c=>c.consultation).length,2);
-assert.deepEqual(describeCall(1,5,indices,base).path,['Agent Raven','Warden Hand','Trinity','Warden Hand','Agent Raven']);
+assert.deepEqual(describeCall(1,5,indices,base).path,['Huginn','Warden Hand','Trinity','Warden Hand','Huginn']);
 assert.ok(!describeCall(0,5,indices,base).path.includes('Trinity'));
 const agent=contracts(base);assert.equal(agent.request.planning.ENG.model,'analysis-model');assert.equal(agent.request.planning.SYNTH.provider,'synthesis-provider');assert.equal(agent.response.execution.permission_granted,false);
 assert.equal(agent.response.example,true);assert.ok(agent.response.candidate_actions.every(action=>action.via==='OpenClaw'&&action.authorization));

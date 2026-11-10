@@ -10,7 +10,7 @@
     const scope = agent ? s['file-scope'] : 'none';
     const objective = s['task-objective'].trim() || 'Define the task objective.';
     const request = {
-      example:true, contract:'illustrative-planning-request/v1', source,
+      example:true, contract:'illustrative-planning-request/v1', source, role:agent?'Huginn':'Muninn', cortex_access:{requested:'none',remote_bridge:'proposed; not enabled by this design'},
       via:['Warden Hand','Trinity Engine'],
       task:{objective,evidence_refs:['source-reference-to-be-supplied']},
       planning:{ENG:{provider:s['eng-provider'],model:s['eng-model']},SYNTH:{provider:s['synth-provider'],model:s['synth-model']},PRIME:{provider:s['prime-provider'],model:s['prime-model'],when:'arbitration is required'}},
@@ -36,7 +36,7 @@
   function describeCall(index,total,consultations,s) {
     const consultation = consultations.has(index);
     const agent = s['scenario-route'] === 'agent';
-    const raven = agent ? 'Agent Raven' : 'Local Raven';
+    const raven = agent ? 'Huginn' : 'Muninn';
     const worker = agent ? s['worker-provider'] : s['local-runtime'];
     const last = index === total-1;
     let title, description;
