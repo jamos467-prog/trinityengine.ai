@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Trinity cycle interchange proposal 0.1.0",
+  "description": "Proposed completed-cycle summary. Structural validation does not establish runtime conformance or factual support.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "cycle_id", "record_kind", "question", "evidence", "perspectives", "disagreements", "response", "memory_candidates"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "cycle_id": {"$ref": "#/$defs/text"},
+    "record_kind": {"enum": ["illustrative", "runtime"]},
+    "question": {"$ref": "#/$defs/text"},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "perspectives": {"type": "array", "minItems": 1, "maxItems": 3, "items": {"$ref": "#/$defs/perspective"}},
+    "disagreements": {"type": "array", "items": {"$ref": "#/$defs/disagreement"}},
+    "response": {"$ref": "#/$defs/text"},
+    "memory_candidates": {"type": "array", "items": {"$ref": "#/$defs/memory"}}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "evidenceIds": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "source_ref", "description"],
+      "properties": {"id": {"$ref": "#/$defs/text"}, "source_ref": {"$ref": "#/$defs/text"}, "description": {"$ref": "#/$defs/text"}}
+    },
+    "perspective": {
+      "type": "object", "additionalProperties": false,
+      "required": ["role", "summary", "evidence_ids"],
+      "properties": {"role": {"enum": ["ENG", "SYNTH", "PRIME"]}, "summary": {"$ref": "#/$defs/text"}, "evidence_ids": {"$ref": "#/$defs/evidenceIds"}}
+    },
+    "disagreement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["topic", "status"],
+      "properties": {"topic": {"$ref": "#/$defs/text"}, "status": {"enum": ["unresolved", "addressed"]}}
+    },
+    "memory": {
+      "type": "object", "additionalProperties": false,
+      "required": ["summary", "evidence_ids", "status"],
+      "properties": {"summary": {"$ref": "#/$defs/text"}, "evidence_ids": {"$ref": "#/$defs/evidenceIds"}, "status": {"const": "proposed"}}
+    }
+  }
+}

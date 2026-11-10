@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1.0",
+  "cycle_id": "illustrative-change-review-001",
+  "record_kind": "illustrative",
+  "question": "Is the proposed change ready for a pilot?",
+  "evidence": [{"id": "e1", "source_ref": "example:change-brief", "description": "Synthetic brief: functional checks passed; load testing remains incomplete."}],
+  "perspectives": [
+    {"role": "ENG", "summary": "Functional checks support a limited trial, but capacity remains unverified.", "evidence_ids": ["e1"]},
+    {"role": "SYNTH", "summary": "A bounded pilot could collect capacity evidence before wider rollout.", "evidence_ids": ["e1"]}
+  ],
+  "disagreements": [{"topic": "Whether the available evidence is sufficient to proceed", "status": "unresolved"}],
+  "response": "Capacity remains uncertain. A bounded pilot is an option for human review; no deployment is authorized by this record.",
+  "memory_candidates": [{"summary": "The illustrative review identified missing load-test evidence.", "evidence_ids": ["e1"], "status": "proposed"}]
+}
