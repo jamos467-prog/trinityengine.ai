@@ -1,0 +1,21 @@
+# Trinity Engine
+
+Trinity Engine describes Artificial Cognition Intelligence (ACi): coded cognitive roles, persistent graph state and policy-governed inference. The public website is static and is not connected to the engine.
+
+## Architecture vocabulary
+
+- Cortex: cognition engine; ENG analysis, SYNTH synthesis and conditional PRIME arbitration.
+- Raven: agent and interface layer; Huginn and Muninn have distinct operating roles.
+- LTKG: long-term knowledge graph.
+- ELLIS Orb Weaver: provenance/linking role connecting sources, evidence, context and retained knowledge.
+- WARDEN: the governance and authorization boundary described by the architecture.
+
+## Public resources
+
+- [Website](https://trinityengine.ai/)
+- [White paper draft 0.2](https://trinityengine.ai/white-paper.html)
+- [Roadmap](https://trinityengine.ai/roadmap.html)
+- [Tiny_Trinity technical page](https://trinityengine.ai/tiny-trinity.html)
+- [Tiny_Trinity JSON seed](https://trinityengine.ai/ai/tiny-trinity.json)
+
+Tiny_Trinity is an experimental, explicit-opt-in context-window emulator specification. Reading or indexing it is not activation. It has no production access, independent models, durable memory or agent tools. Its weights and convergence contracts are illustrative, and behavioural equivalence to Cortex has not been established. Ed25519 integration and public-key publication remain pending in the public documentation.
