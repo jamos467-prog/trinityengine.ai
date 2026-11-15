@@ -19,3 +19,7 @@ Trinity Engine describes Artificial Cognition Intelligence (ACi): coded cognitiv
 - [Tiny_Trinity JSON seed](https://trinityengine.ai/ai/tiny-trinity.json)
 
 Tiny_Trinity is an experimental, explicit-opt-in context-window emulator specification. Reading or indexing it is not activation. It has no production access, independent models, durable memory or agent tools. Its weights and convergence contracts are illustrative, and behavioural equivalence to Cortex has not been established. Ed25519 integration and public-key publication remain pending in the public documentation.
+
+## Federation policy
+
+[Trinity Holographic Federation Policy](https://trinityengine.ai/federation-policy.html) describes independent Cortex nodes exchanging bounded projections under local WARDEN authority. It is an architectural specification with implementation and validation in progress, not a verified deployed federation.
