@@ -1,6 +1,8 @@
 (() => {
 'use strict';
 const dialog=document.getElementById('trust-verifier');
+const trigger=document.getElementById('open-trust-verifier');
+if(!dialog||!trigger||trigger.hidden)return;
 const payload=document.getElementById('trust-payload');
 const result=document.getElementById('trust-verification-result');
 document.getElementById('open-trust-verifier').addEventListener('click',()=>dialog.showModal());
