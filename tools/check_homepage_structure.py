@@ -16,8 +16,8 @@ for e in s.select('[src],link[href]'):
  if not ref or ref.startswith(('http','data:','#')):continue
  assert (root/ref.split('?')[0]).exists(), ref
 assert len(s.select('[data-gallery-category]'))==5
-assert len(s.select('[data-gallery-group]'))==17
+assert len(s.select('[data-gallery-group]'))==21
 assert s.select_one('#signup #trinity-after-hours'), 'Footer artwork moved'
 assert s.select_one('script[src^="assets/homepage-redesign.js"]').has_attr('defer')
 assert 'sole issuer' in s.select_one('#development').get_text()
-print('PASS: 140 historical anchors, unique IDs, local assets, fragment links, five gallery categories, 17 captures, footer placement and deferred controller')
+print('PASS: 140 historical anchors, unique IDs, local assets, fragment links, five gallery categories, 21 captures, footer placement and deferred controller')
