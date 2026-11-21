@@ -24,10 +24,16 @@ Scope: website only; no application changes.
 
 ## Default reading length
 At matched CSS widths, with no fragment and default-closed disclosures:
-- Desktop 1280px: 55,890px before; 11,116px after (80.1% less).
-- Mobile 390px: 103,703px before; 14,036px after (86.5% less).
+- Desktop 1280px: 55,890px before; 11,157px after (80.0% less).
+- Mobile 390px: 103,703px before; 14,343px after (86.2% less).
 - Detailed content remains available. These figures describe the initial reading path, not deletion of that proportion of the content.
 - Raw measurements: `homepage-scroll-metrics.json`.
 
 ## Publication
-Live publication verification and screenshots pending at this revision.
+Published implementation commit: 957e724. Verified live on https://trinityengine.ai/index.html on 21 November 2026.
+
+Live checks passed: five gallery categories; one selected capture; Operations defaults to API traffic with its image loaded; nested unified-field disclosure opens from its fragment; workspace-axis-detail selects its capture; no desktop/mobile horizontal page overflow.
+
+Saved evidence in the workspace QA directory: homepage-redesign-gallery.jpg and homepage-redesign-mobile.jpg.
+
+An initial local-preview initialization error was fixed by deferring the gallery controller until the document was parsed. Subsequent interaction checks passed.

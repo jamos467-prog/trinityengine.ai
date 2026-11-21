@@ -1,14 +1,15 @@
 {
   "desktop": {
     "before": 55890,
-    "after": 11116,
+    "after": 11157,
     "width": 1280,
-    "reduction": 80.11093218822687
+    "reduction": 80.03757380568975
   },
   "mobile": {
     "before": 103703,
-    "after": 14036,
+    "after": 14343,
     "width": 390,
-    "reduction": 86.46519387095842
-  }
+    "reduction": 86.16915614784529
+  },
+  "measurement": "Live GitHub Pages, no fragment, default-closed disclosures, 21 November 2026"
 }

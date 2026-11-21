@@ -38,8 +38,8 @@ Reduce first-visit cognitive load with a coherent narrative, one captured-interf
 - [x] Validate all old IDs, internal links, assets and JavaScript syntax.
 - [x] Browser QA: gallery selection, next/previous, enlargement/Escape, history, nested deep links, existing demos, mobile overflow and layout.
 - [x] Measure new default page height against baseline; record actual reduction.
-- [ ] Save desktop/mobile screenshots and verification report.
-- [ ] Commit, publish through existing GitHub Pages, verify live result.
+- [x] Save desktop/mobile screenshots and verification report.
+- [x] Commit, publish through existing GitHub Pages, verify live result.
 
 ## Verification method
 Measure loaded page scrollHeight with no fragment and default-closed disclosures, at identical viewport widths. Image width/height attributes reserve layout. Expanded content is intentionally excluded from the initial-reading comparison. Record actual figures rather than claiming the requested percentage without measurement.
@@ -52,4 +52,10 @@ Measure loaded page scrollHeight with no fragment and default-closed disclosures
 - Build status is distinct from product status: website publication does not change application functionality.
 
 ## Delivery record
-To be completed after QA and deployment.
+Implementation published as 957e724 and verified live on 21 November 2026.
+
+Delivered five gallery categories, 17 selectable captures, 23 optional technical disclosures, all 140 historical IDs, the corrected Cortex-only coding order contract, keyboard enlargement, deep-link reveal and a shorter primary narrative.
+
+Live default scroll height: desktop 55,890 → 11,157px (80.0% reduction); mobile 103,703 → 14,343px (86.2% reduction). This exceeds the initial 25–30% saving target while retaining the technical content on demand.
+
+See WEBSITE-REDESIGN-QA.md and homepage-scroll-metrics.json for validation and measurements. No application code changed.
