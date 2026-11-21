@@ -83,4 +83,12 @@ Date: 21 November 2026. Scope: website only.
 The cycle must come from an actual Session Console record. No signup-benefit or biography question remains unresolved.
 
 ## Publication record
-Pending commit, deployment and live verification.
+Published implementation commit: 10859c9. Live verification completed on 21 November 2026.
+
+Verified Home, Architecture, Research, Origins and Roadmap at desktop 1280px and mobile 375px, without horizontal page overflow. Confirmed live legacy research routing, hidden verifier, visible mail-request form, 12-term vocabulary and dfn#ellis. Browser console checks returned no errors.
+
+Saved workspace evidence: qa/consolidation-v2-home.jpg, qa/consolidation-v2-mobile.jpg and qa/consolidation-v2-origins.jpg (outside the public checkout).
+
+Live llms.txt and ai/tiny-trinity.json return HTTP 200; the seed parses as JSON.
+
+No signup was submitted or email sent during verification. No application files were changed. All requested P1–P7 implementation items pass; the eight explicitly requested content placeholders await a real captured cycle and Session Analytics figures.
