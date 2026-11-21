@@ -1,0 +1,14 @@
+{
+  "desktop": {
+    "before": 55890,
+    "after": 11116,
+    "width": 1280,
+    "reduction": 80.11093218822687
+  },
+  "mobile": {
+    "before": 103703,
+    "after": 14036,
+    "width": 390,
+    "reduction": 86.46519387095842
+  }
+}
