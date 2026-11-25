@@ -31,3 +31,7 @@ Tiny_Trinity is an experimental, explicit-opt-in context-window emulator specifi
 - [Origins](https://trinityengine.ai/origins.html): ELLIS Orb Weaver, cultural background, runes and the 12-term machine-readable vocabulary.
 
 Homepage fragment links for moved topics resolve to their new document locations. Reading reference content does not activate Tiny_Trinity.
+
+## Cortex Foundry
+
+[Cortex Foundry](https://trinityengine.ai/cortex-foundry.html): self-contained specialist cells, Workshop promotion, isolated frozen ledgers, and Solo/Federated/META_TRINITY composition. Interactive diagrams and JSON are illustrative, not live engine telemetry.
