@@ -2,3 +2,11 @@
 .footer{padding:48px 24px 28px;background:#08121a;border-top:1px solid #294550;color:#b9cfd7}.footer>.container{max-width:1160px;margin:auto}.footer .footer-content{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start}.footer .footer-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.footer .footer-column h4{font-size:16px;color:#d2eee8;margin:0 0 12px}.footer .footer-column a{display:block;font-size:15px;line-height:1.7;padding:5px 0;color:#a8c6ce;text-decoration:none}.footer .nav-brand{display:inline-flex;align-items:center;gap:10px;font-size:18px;color:#d8f0ea;text-decoration:none}.footer .logo-icon{font-size:27px;color:#24dac2}.footer .ellis-site-mark{display:inline-flex;align-items:center;gap:10px;margin-top:26px;color:#a4d6cd;font-size:12px;text-decoration:none}.footer .footer-bottom{border-top:1px solid #213e48;padding-top:18px;margin-top:20px;font-size:13px;line-height:1.8}.footer .footer-bottom a{color:#b7d3d8}.footer a:focus-visible{outline:2px solid #d8c48e;outline-offset:4px}@media(max-width:650px){.footer .footer-content{grid-template-columns:1fr;gap:25px}.footer .footer-links{grid-template-columns:1fr 1fr}.footer .footer-column a{padding-block:8px}}@media(max-width:380px){.footer{padding-inline:20px}}
 
 .foundry-teaser{margin:24px 0;padding:22px;border:1px solid #75662f;border-left:3px solid #f5b800;background:#15181d}.foundry-teaser h3{color:#f5b800;margin-top:0}
+
+/* A readable process replaces the unfinished worked-example evidence slots. */
+.cycle-walkthrough{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:22px 32px}
+.cycle-walkthrough li{display:flex;gap:16px;padding:18px 0;border-top:1px solid #31505a}
+.cycle-number{font:600 14px monospace;color:#00e6c3;padding-top:5px}
+.cycle-walkthrough h3{margin:0 0 8px;font-size:19px}.cycle-walkthrough p{margin:0}
+.cycle-capture-link{margin-top:24px;padding-top:20px;border-top:1px solid #31505a}.cycle-capture-link a{margin-right:20px;display:inline-block;margin-top:8px}
+@media(max-width:650px){.cycle-walkthrough{grid-template-columns:1fr;gap:0}}
